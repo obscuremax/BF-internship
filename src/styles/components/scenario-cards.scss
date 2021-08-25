@@ -1,0 +1,13 @@
+.scenario-cards {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+
+  &_row {
+    display: flex;
+    flex-direction: column;
+    height: 78.8rem;
+    max-height: 78.8rem;
+    justify-content: space-between;
+  }
+}

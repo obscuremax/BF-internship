@@ -1,0 +1,20 @@
+include ./subtitle
+include ./button
+
+mixin scenario-card(obj)
+  if obj.reverse === true
+    .scenario-card.scenario-card--reverse
+      .scenario-card_box(data-income=obj.income)
+        img.scenario-card_image(src=obj.src, alt="")
+        span.scenario-card_text Доход
+      .scenario-card_content
+        +subtitle(obj.title, obj.subtitle)
+        +button("Заказать", "scenario-card_button")
+  else
+    .scenario-card
+        .scenario-card_box.scenario-card_box--reverse(data-income=obj.income)
+          img.scenario-card_image(src=obj.src, alt="")
+          span.scenario-card_text Доход
+        .scenario-card_content
+          +subtitle(obj.title, obj.subtitle)
+          +button("Заказать", "scenario-card_button")

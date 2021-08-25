@@ -1,0 +1,31 @@
+@import "../utils/variables";
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  width: 120.5rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  &_link {
+    width: 5rem;
+    height: 5rem;
+    background-color: rgba(196, 196, 196, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_image {
+    path {
+      fill: $light;
+    }
+
+    &--rotate180 {
+      transform: rotate(180deg);
+    }
+  }
+}
