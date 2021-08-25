@@ -1,0 +1,4 @@
+@mixin font ($family: "Open Sans", $weight: 400) {
+  font-family: $family, sans-serif;
+  font-weight: $weight;
+}

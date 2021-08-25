@@ -1,0 +1,37 @@
+@import "../utils/variables";
+
+.sphere-card {
+  width: 52.5rem;
+  height: 30.5rem;
+  background: $success;
+  border: 1.5px solid #3f3d56;
+  box-shadow: 0 0 1.04px rgba(0, 0, 0, 0.08), 0 1.04px 12.5px rgba(0, 0, 0, 0.08);
+  border-radius: 0.7rem;
+  position: relative;
+
+  &_title {
+    font-size: 4rem;
+    margin-top: 2.1rem;
+    margin-left: 3.1rem;
+    letter-spacing: -0.1rem;
+  }
+
+  &_link {
+    position: absolute;
+    bottom: 2.1rem;
+    left: 3.2rem;
+    width: 5rem;
+    height: 5rem;
+    background: $light;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_image {
+    position: absolute;
+    right: 3rem;
+    bottom: 1rem;
+  }
+}

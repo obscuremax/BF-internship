@@ -1,0 +1,33 @@
+@import "../mixins/font";
+
+@import "../mixins/font-size";
+
+@import "../utils/variables";
+
+.phone {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 35.4rem;
+  max-width: 35.4rem;
+
+  &_number {
+
+    @include font("Source Sans Pro", 600);
+
+    @include font-size($small-bg);
+
+    letter-spacing: 0.1rem;
+  }
+
+  &_button {
+    color: $light;
+    background-color: $success;
+    border-radius: $small-bg;
+    padding: 1rem 0.7rem;
+
+    @include font("Source Sans Pro", 600);
+
+    @include font-size($small-bg);
+  }
+}

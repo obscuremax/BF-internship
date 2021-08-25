@@ -1,0 +1,9 @@
+- let simpleCards = [{src: "../../img/list.png", title: "Сценарии «Бизнес роста»", subtitle: "Выбери сценарий — получи рост на 30% и более"}, {src: "../../img/monitor.png", title: "Наше ПО", subtitle: "Проверим вашу ККТ на совместимость с нашим ПО"}, {src: "../../img/guy.png", title: "Обучение", subtitle: "20 лет работы и экспертизы в  розничном бизнесе"}, {src: "../../img/cub.png", title: "Решение из коробки", subtitle: "Достань, подключи, работай"}]
+
+include ../mixin/simple-card
+
+.simple-cards
+	ul.list
+		each card in simpleCards
+			li.list__item 
+				+simple-card(card.src, card.title, card.subtitle)

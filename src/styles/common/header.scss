@@ -1,0 +1,41 @@
+@import "../mixins/media";
+
+@import "../utils/variables";
+
+.header {
+  &_wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_logo {
+    margin-top: 0.4rem;
+  }
+
+  &_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70.7rem;
+    max-width: 70.7rem;
+    margin: 0.7rem 0;
+  }
+
+  // @include media-big-laptop {
+  // }
+
+  // @include media-laptop {
+  // }
+
+  // @include media-tablet-horizontal {
+  // }
+
+  // @include media-tablet {
+  // }
+
+  // @include media-mobile-horizontal {
+  // }
+
+  // @include media-mobile {
+  // }
+}

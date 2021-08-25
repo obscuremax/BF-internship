@@ -1,0 +1,62 @@
+@import "../utils/variables";
+
+
+.simple-card {
+  width: 25.1rem;
+  overflow: hidden;
+  position: relative;
+
+  &_icon {
+    width: 8.8rem;
+    height: 8.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e5e5e5;
+    position: absolute;
+    top: -0.6rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  &_icon-inner {
+    width: 7.6rem;
+    height: 7.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $success;
+    border-radius: 50%;
+  }
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: $success;
+    margin-top: 4.2rem;
+    box-shadow: 0 0 0.5px rgba(0, 0, 0, 0.08), 0 0.5px 5.98px rgba(0, 0, 0, 0.08);
+    border-radius: 15px;
+    padding: 4.6rem 1.7rem 2.5rem 2rem;
+    height: 21.1rem;
+  }
+
+  &_title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    width: 16rem;
+    height: 4rem;
+  }
+
+  &_subtitle {
+    font-size: 20px;
+    line-height: 25px;
+    width: 20.5rem;
+    border-top: 3px solid $secondary;
+    margin-top: 1.2rem;
+    padding-top: 1rem;
+  }
+}

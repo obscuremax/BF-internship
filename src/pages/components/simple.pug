@@ -1,0 +1,10 @@
+- let simpleContent = {title: "С нами все просто", subtitle: "Лучшее решение для  роста вашего бизнеса", text: "ИРИС Ритейл взял лучших на рынке провайдеров технологий, которые способны обеспечить реальный рост выручки малого или среднего предпринимателя-ритейлера", src: "../img/simple.png"}
+
+section.simple
+	.container
+		.simple_wrapper
+			include ../mixin/title
+			+title(simpleContent.title, "simple_title")
+			include ../mixin/section-content
+			+section-content(simpleContent)
+		include ./simple-cards

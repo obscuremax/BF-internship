@@ -1,0 +1,9 @@
+include ./image
+mixin simple-card(src, title, subtitle)
+	.simple-card
+		.simple-card_icon
+			.simple-card_icon-inner
+				+image(src)
+		.simple-card_content
+			h4.simple-card_title #{title}
+			p.simple-card_subtitle #{subtitle}

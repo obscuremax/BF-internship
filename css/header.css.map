@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,MAAM,CAAC;EACL,gBAAgB,EAAE,GAAG;CAKtB",
+    "sources": [
+        "../src/styles/common/header.scss",
+        "../src/styles/mixins/media.scss",
+        "../src/styles/utils/variables.scss"
+    ],
+    "names": [],
+    "file": "header.css"
+}

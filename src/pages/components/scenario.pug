@@ -1,0 +1,10 @@
+include ../mixin/title
+include ../mixin/section-menu
+
+- let scenarioLinks = [{adress: "#", name: "Рост доходов", className: "section-menu_link section-menu_link--active"}, {adress: "#", name: "Снижение расходов", className: "section-menu_link"}]
+
+.scenario
+  .container
+    +title("Сценарии роста бизнеса", "scenario_title")
+    +section-menu(scenarioLinks)
+    include ../includes/scenario-par

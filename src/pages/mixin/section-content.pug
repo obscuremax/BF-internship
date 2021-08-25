@@ -1,0 +1,6 @@
+mixin section-content(obj)
+	.section_content
+		include ./subtitle
+		+subtitle(obj.subtitle, obj.text)
+		include ./image
+		+image(obj.src)

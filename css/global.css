@@ -1,0 +1,34 @@
+@import url(d:\Brainforce-task\template\src\local_modules\normalize.css\normalize.css);
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+.l-flex,
+.l-list {
+  display: flex;
+}
+/*# sourceMappingURL=global.css.map */

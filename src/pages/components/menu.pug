@@ -1,0 +1,11 @@
+include ../common/variables
+include ../mixin/link
+
+nav.header_menu
+	ul.menu
+		each obj, i in menu
+			li.menu_item
+				if i===0
+					+link(obj.adress, obj.name, "menu_link menu_link--active")
+				else
+					+link(obj.adress, obj.name, "menu_link")

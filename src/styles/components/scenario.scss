@@ -1,0 +1,22 @@
+@import "../utils/variables";
+
+.scenario {
+  &_title {
+    font-weight: bold;
+    font-size: $big;
+    line-height: $big;
+    margin-top: .2rem;
+    margin-bottom: 4.4rem;
+  }
+
+  &_text {
+    font-weight: 600;
+    font-size: $medium;
+    line-height: $medium;
+    margin: 0 auto;
+    margin-top: 6.7rem;
+    margin-bottom: 14rem;
+    max-width: 89.3rem;
+    text-align: center;
+  }
+}
