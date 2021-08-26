@@ -1,4 +1,6 @@
-mixin subtitle(subtitle, text)
-	.subtitle
-		h3.subtitle_main #{subtitle}
-		p.subtitle_text #{text}
+mixin subtitle(subtitle, text, text2)
+  .subtitle
+    h3.subtitle_main #{subtitle}
+    p.subtitle_text #{text}
+    if text2 == true
+    p.subtitle_text #{text2}
