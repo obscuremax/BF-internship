@@ -1,0 +1,17 @@
+include ../mixin/select
+include ../mixin/label
+include ../mixin/label-add
+
+- let labelData = {className: "label--mgb", labelName: "KKT", select: {name: "kkt", id: "kkt", className: "select--mgt", required: true, values: ["Нева — 01 — Ф", "Нева — 02 — Ф", "Нева — 03 — Ф"]}}
+
+- let labelsAddData = [{className: "label--mgb", labelName: "Сценарий роста бизнеса", select: {name: "rise1", id: "rise1", className: "select--mgt", required: false, values: ["Нет", "Интерактивные видеоуроки", "Автоматические предзаказы", "Видео аналитика", "Оценка эффективности рекламы"]}, buttonClassName: "label-add_button-close"}, {className: "label--mgb", labelName: "Сценарий роста бизнеса", select: {name: "rise2", id: "rise2", className: "select--mgt", required: false, values: ["Нет", "Интерактивные видеоуроки", "Автоматические предзаказы", "Видео аналитика", "Оценка эффективности рекламы"]}, buttonClassName: "label-add_button-close"}]
+
+.form-choice
+  +label(labelData)
+  .form-choice_box
+    each label in labelsAddData
+      +label-add(label)
+  p.form-choice_add-scenario Добавить сцеарий
+  .form-choice_cash
+    .form-choice_price.form-choice_price--mgt 240 000 руб/мес
+    input#price(type="range", name="price" min="100000" max="300000" value="240000").form-choice_range

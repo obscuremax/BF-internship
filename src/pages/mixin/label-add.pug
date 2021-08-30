@@ -1,0 +1,6 @@
+include ./select
+include ./button-close
+mixin label-add(obj)
+  label(class=obj.className for=obj.select.id).label.label-add #{obj.labelName}
+      +select(obj.select)
+      +button-close(obj.buttonClassName)
