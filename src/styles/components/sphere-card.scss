@@ -2,7 +2,9 @@
 
 .sphere-card {
   width: 52.5rem;
+  max-width: 52.5rem;
   height: 30.5rem;
+  max-height: 30.5rem;
   background: $success;
   border: 1.5px solid #3f3d56;
   box-shadow: 0 0 1.04px rgba(0, 0, 0, 0.08), 0 1.04px 12.5px rgba(0, 0, 0, 0.08);

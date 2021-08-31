@@ -5,31 +5,32 @@ include ../mixin/button
 include ../mixin/arroy
 include ../mixin/link
 
-- let cashBoxLinks = [{adress: "#", name: "О кассе", className: "section-menu_link section-menu_link--active"}, {adress: "#", name: "Видео", className: "section-menu_link"}, {adress: "#", name: "Характеристики", className: "section-menu_link"}]
+- let cashBoxLinks = [{name: "О кассе", className: "section-menu_button section-menu_button--active"}, {name: "Видео", className: "section-menu_button"}, {name: "Характеристики", className: "section-menu_button"}]
 
 .cashbox
   .container
     +title("Наши касса", "cashbox_title")
-    +section-menu(cashBoxLinks)
+    +section-menu(cashBoxLinks, "cashbox_section-menu")
     .cashbox_inner
       .cashbox_col.cashbox_col--first
         h4.cashbox_title-sm НЕВА — 01 — Ф
-        +subtitle("Идеальное решение для малого бизнеса", "Устройство работает на базе Android, оснащена семидюймовым сенсорным экраном, портами USB, Ethernet и сетевыми проотколами GPRS, Wi-Fi, Bluetooth", "Кассовое ядро позволяет интегрировать с ККТ Нева — 01 — Ф любые сторонние приложения")
-        +button("Заказать", "scenario-card_button cashbox_button")
+        +subtitle("Идеальное решение для малого бизнеса", ["Устройство работает на базе Android, оснащена семидюймовым сенсорным экраном, портами USB, Ethernet и сетевыми проотколами GPRS, Wi-Fi, Bluetooth", "Кассовое ядро позволяет интегрировать с ККТ Нева — 01 — Ф любые сторонние приложения"])
+        +button("" ,"Заказать", "scenario-card_button cashbox_button")
       .cashbox_col.cashbox_col--second
         .cashbox-slider
           .cashbox-slider_box
-            a(href="#").cashbox-slider_link
+            .cashbox-slider_link
               +arroy("cashbox-slider_arroy sphere-slider_image sphere-slider_image--rotate180")
             .cashbox-slider_content
               img(src="../../img/cashbox.png", alt="").cashbox-slider_image
-            a(href="#").cashbox-slider_link
+            .cashbox-slider_link
               +arroy("cashbox-slider_arroy sphere-slider_image")
           .cashbox-slider_nav
-            +link("#", "",className="cashbox-slider_circle cashbox-slider_circle--active")
-            +link("#", "",className="cashbox-slider_circle")
-            +link("#", "",className="cashbox-slider_circle")
-            +link("#", "",className="cashbox-slider_circle")
+            .cashbox-slider_circle.cashbox-slider_circle--active
+            .cashbox-slider_circle
+            .cashbox-slider_circle
+            .cashbox-slider_circle
+
 
 
 

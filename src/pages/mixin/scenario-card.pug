@@ -9,7 +9,7 @@ mixin scenario-card(obj)
         span.scenario-card_text Доход
       .scenario-card_content
         +subtitle(obj.title, obj.subtitle)
-        +button("Заказать", "scenario-card_button")
+        +button("#", "Заказать", "scenario-card_button")
   else
     .scenario-card
         .scenario-card_box.scenario-card_box--reverse(data-income=obj.income)
@@ -17,4 +17,4 @@ mixin scenario-card(obj)
           span.scenario-card_text Доход
         .scenario-card_content
           +subtitle(obj.title, obj.subtitle)
-          +button("Заказать", "scenario-card_button")
+          +button("#" , "Заказать", "scenario-card_button")

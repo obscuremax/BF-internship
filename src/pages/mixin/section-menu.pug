@@ -1,8 +1,8 @@
-include ./link
+include ./section-menu-button
 
 mixin section-menu(array, className)
   nav
     ul(class=className).section-menu
       each obj in array
         li.list_item.section-menu_item
-          +link(obj.adress, obj.name, obj.className)
+          +section-menu-button(obj.name, obj.className)

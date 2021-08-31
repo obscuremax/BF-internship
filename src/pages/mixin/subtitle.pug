@@ -1,6 +1,5 @@
-mixin subtitle(subtitle, text, text2)
-  .subtitle
+mixin subtitle(subtitle, text, className)
+  .subtitle(class=className)
     h3.subtitle_main #{subtitle}
-    p.subtitle_text #{text}
-    if text2 == true
-    p.subtitle_text #{text2}
+    each el in text
+      p.subtitle_text #{el}

@@ -2,7 +2,11 @@
 @import "../mixins/font-size";
 
 .choice {
-  padding-bottom: 10rem;
+  padding-top: 4.8rem;
+  padding-bottom: 35.4rem;
+  &_header {
+    margin-top: -.7rem;
+  }
   &_title {
     font-weight: bold;
     @include font-size($big);
@@ -16,7 +20,7 @@
     margin: 0 auto;
   }
   &_menu {
-    margin-top: 4.4rem;
-    margin-bottom: 6.6rem;
+    margin-top: 2.6rem;
+    margin-bottom: 5.6rem;
   }
 }
