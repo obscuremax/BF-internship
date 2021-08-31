@@ -1,0 +1,12 @@
+form#footer-form.footer-form(action="#")
+  .footer-form_inner
+    label.footer-form_label(for="city") Город
+      input#city(type="text", name="city" placeholder="Москва").footer-form_input
+    label.footer-form_label(for="first-name") Имя
+      input#first-name(type="text", name="first-name" placeholder="Иванов Иван Иванович").footer-form_input
+    label.footer-form_label(for="phone") Телефон
+      input#phone(type="tel", name="phone" placeholder="+7").footer-form_input
+    .footer-form_box
+      input#footer-checkbox(type="checkbox", name="checkbox" value="agree" checked).footer-form_checkbox
+      label(for="footer-checkbox").footer-form_label-checkbox Я согласен с условиями сбора и обработки персональных данных
+    input(type="submit", value="Оставить заявку").footer-form_aplication-button

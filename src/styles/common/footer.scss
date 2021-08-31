@@ -1,3 +1,29 @@
+@import "./utils/variables";
+
 .footer {
-  height: 20px;
+  height: 106.9rem;
+  max-height: 106.9rem;
+  background: $success;
+  position: relative;
+  padding-bottom: 7.2rem;
+  padding-top: 21.2rem;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-left-width: 53.45rem;
+    border-right-width: 53.45rem;
+    border-top: 8rem solid #e5e5e5;;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  &_inner {
+    display: flex;
+    justify-content: space-between;
+  }
 }
