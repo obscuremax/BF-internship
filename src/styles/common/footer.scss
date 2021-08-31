@@ -16,12 +16,13 @@
     border: 0 solid transparent;
     border-left-width: 53.45rem;
     border-right-width: 53.45rem;
-    border-top: 8rem solid #e5e5e5;;
+    border-top: 8rem solid #e5e5e5;
     position: absolute;
     top: 0;
     left: 50%;
     transform: translate(-50%, 0);
   }
+
   &_inner {
     display: flex;
     justify-content: space-between;

@@ -3,55 +3,61 @@
 .footer-form {
   width: 37.8rem;
   max-width: 37.8rem;
-  margin-top: -.8rem;
+  margin-top: -0.8rem;
 
   &_label {
     display: block;
     font-size: $small-bg;
     line-height: $medium-sm;
     color: $primary;
+
     & + & {
       margin-top: 1.6rem;
     }
   }
+
   &_input {
     display: block;
     width: 100%;
     height: 7rem;
     background: $light;
-    border-radius: .7rem;
+    border-radius: 0.7rem;
     border: 0;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
     font-size: $medium-sm;
     line-height: $medium-sm;
-    padding: 0 .8rem;
+    padding: 0 0.8rem;
     outline: none;
   }
+
   &_box {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     margin-top: 5rem;
   }
+
   &_label-checkbox {
     font-size: 1.8rem;
     line-height: $medium-sm;
     cursor: pointer;
   }
+
   &_checkbox {
-    -webkit-appearance: none;
+    appearance: none;
     width: 2rem;
     min-width: 2rem;
     height: 2rem;
     display: block;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     cursor: pointer;
     position: relative;
     margin-right: 1.2rem;
-
   }
+
   &_checkbox:checked {
     background: $success;
+
     &::after {
       content: url("../../img/icon.svg");
       position: absolute;
@@ -60,16 +66,19 @@
       height: 2rem;
     }
   }
+
   &_checkbox:not(:checked) {
     background: $light;
+
     &::after {
       content: "";
     }
   }
+
   &_aplication-button {
     height: 8.3rem;
     background: $light;
-    border-radius: .7rem;
+    border-radius: 0.7rem;
     font-weight: 600;
     font-size: $medium-sm;
     line-height: 1.8rem;

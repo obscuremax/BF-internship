@@ -4,21 +4,26 @@
   top: 0;
   width: 2rem;
   height: 2rem;
-  }
-  .close:hover {
-    cursor: pointer;
-  }
-  .close:before, .close:after {
-    position: absolute;
-    content: ' ';
-    height: 2rem;
-    width: .2rem;
-    background-color: #B4ABAB;
-    left: 50%;
-  }
-  .close:before {
-    transform: rotate(45deg);
-  }
-  .close:after {
-    transform: rotate(-45deg);
-  }
+}
+
+.close:hover {
+  cursor: pointer;
+}
+
+.close::before,
+.close::after {
+  position: absolute;
+  content: " ";
+  height: 2rem;
+  width: 0.2rem;
+  background-color: #b4abab;
+  left: 50%;
+}
+
+.close::before {
+  transform: rotate(45deg);
+}
+
+.close::after {
+  transform: rotate(-45deg);
+}

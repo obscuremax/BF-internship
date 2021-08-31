@@ -2,28 +2,33 @@
 
 .footer-tail {
   margin-top: 6.5rem;
+
   &_inner {
     width: 60.5rem;
     max-width: 60.5rem;
     display: flex;
     justify-content: space-between;
   }
+
   &_order {
     width: 29.3rem;
     max-width: 29.3rem;
   }
+
   &_title {
     font-size: $smallest;
     line-height: 110%;
     opacity: 0.7;
     margin-bottom: 1.4rem;
   }
+
   &_link {
     font-size: $medium;
     line-height: 100%;
     color: $primary;
-    border-bottom: .1rem solid $primary;
+    border-bottom: 0.1rem solid $primary;
   }
+
   &_text {
     font-size: $small;
     line-height: 120%;

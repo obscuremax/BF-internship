@@ -1,6 +1,7 @@
 .simple {
   padding-top: 2.6rem;
   padding-bottom: 7rem;
+
   &_title {
     margin-top: -1.1rem;
   }
@@ -31,6 +32,7 @@
 
   &-cards {
     margin-top: 9.8rem;
+
     .list {
       display: flex;
       justify-content: space-between;

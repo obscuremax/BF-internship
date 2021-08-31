@@ -20,7 +20,9 @@ html {
 
 body {
   margin: 0 auto;
+
   @include font;
+
   position: relative;
 }
 
