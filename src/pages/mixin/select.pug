@@ -1,4 +1,0 @@
-mixin select(obj)
-  select(name=obj.name id=obj.id class=obj.className required=obj.required size="1").select
-    each value in obj.values
-      option(value=value ).select_option #{value}

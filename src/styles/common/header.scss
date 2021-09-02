@@ -1,55 +1,83 @@
-@import "../mixins/media";
-
-@import "../utils/variables";
+@import "../utils/utils";
+@import "../mixins/mixins";
 
 .header {
+  @include font("Source Sans Pro", 600);
+  @include font-size($small-bg, $small-bg);
+  padding: 0.8rem 0;
   position: fixed;
   top: 0;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translateX(-50%);
   width: 100%;
   background: $light;
-  z-index: 100;
-
-  &_wrap {
-    display: flex;
-    justify-content: space-between;
+  @include media-mobile-horizontal {
+    display: none;
   }
 
-  &_logo {
-    margin-top: 0.4rem;
-  }
-
-  &_content {
+  &__container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 70.7rem;
-    max-width: 70.7rem;
-    margin: 0.7rem 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include media-tablet {
+      flex-direction: column;
+    }
   }
 
-  // @include media-big-laptop {
-
-  // }
+  &__logo {
+    margin-top: -1.2rem;
+  }
+  &__menu {
+    margin: 0 3.6rem 0 auto;
+    @include media-tablet-horizontal {
+      order: 3;
+      margin: .5rem auto;
+    }
+  }
+  &__phone {
+    display: flex;
+    align-items: center;
+    @include media-tablet {
+      display: none;
+    }
+  }
+  &_phone-number {
+    margin-right: 1.7rem;
+    @include font("Open sans", bold);
+    color: $primary-light;
+  }
+  &__phone-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 17.4rem;
+    height: 4rem;
+    background: $success;
+    border-radius: 2rem;
+    color: $light;
+    &:hover {
+      background-color: linear-gradient(
+        70.6deg,
+        #35cc79 5.03%,
+        rgba(52, 125, 85, 0.65) 80.7%
+      );
+      color: darken($light, 5%);
+    }
+  }
 
   // @include media-laptop {
-
   // }
 
   // @include media-tablet-horizontal {
-
   // }
 
   // @include media-tablet {
-
   // }
 
   // @include media-mobile-horizontal {
-
   // }
 
   // @include media-mobile {
-
   // }
 }

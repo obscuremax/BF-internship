@@ -1,8 +1,0 @@
-include ./section-menu-button
-
-mixin section-menu(array, className)
-  nav
-    ul(class=className).section-menu
-      each obj in array
-        li.list_item.section-menu_item
-          +section-menu-button(obj.name, obj.className)

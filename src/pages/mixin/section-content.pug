@@ -1,6 +1,0 @@
-mixin section-content(obj, className)
-	.section_content(class=className)
-		include ./subtitle
-		+subtitle(obj.subtitle, obj.text, obj.className)
-		include ./image
-		+image(obj.src)
