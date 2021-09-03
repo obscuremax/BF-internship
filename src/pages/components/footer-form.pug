@@ -1,0 +1,21 @@
+extends ./layout-form
+
+
+
+
+block formId
+  - let id = "footer-form"
+  - let className = "footer__form"
+
+block form
+  label.label.footer__label Город
+    input.input#city.footer__input(type="text" placeholder="Москва")
+  label.label.footer__label Имя
+    input.input#name.footer__input(type="text" placeholder="Иванов Иван Иванович")
+  label.label.footer__label Телефон
+    input.input#phone.footer__input(type="tel" placeholder="+7")
+  label.footer__agree-label
+    input#agree(type="checkbox" name="agree" checked)
+    span.footer__agree-fake
+    span.footer__agree-text Я согласен с условиями сбора и обработки персональных данных
+

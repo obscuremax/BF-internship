@@ -1,3 +1,22 @@
 footer.footer
-  .container
+  .container.footer__container
+    .footer__head
+      include ../includes/footer-title
+      .footer__logo
+        a(href="#").footer__link
+          img(src="../../img/logo-footer.png", alt="logo").footer__img
+    include ../components/footer-form
+    .footer__logo-one
+        a(href="#").footer__link
+          img(src="../../img/logo-footer.png", alt="logo").footer__img
+    .footer__contacts
+      .footer__contact
+        p.footer__action Заказать
+        a(href="maito:iris-retail@iris.ru").footer__action-link iris-retail@iris.ru
+      .footer__contact
+        p.footer__action Наши контакты
+        a(href="tel:+88005500479" id="contact").footer__action-link 8 (800) 550-04-79
+    include ../includes/footer-tail
+
+
 
