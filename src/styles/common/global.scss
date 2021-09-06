@@ -76,6 +76,32 @@ h1 {
   display: flex;
 }
 
+.title {
+  font-weight: bold;
+  @include font-size($big, $big);
+  text-align: center;
+  margin-top: -.9rem;
+
+}
+
+.title--bg {
+  @include font-size($biggest, $biggest);
+  @include media-tablet {
+    font-size: 4.5rem;
+  }
+  @include media-mobile-horizontal {
+    @include font-size($medium, $medium-bg);
+  }
+
+}
+
+picture {
+  img {
+    display: block;
+  }
+}
+
+
 // .title {
 //   font-weight: bold;
 //   font-size: $biggest;
@@ -126,7 +152,7 @@ h1 {
   @include media-mobile {
     max-width:  30rem;
   }
-  
+
   &__button {
     height: 8.3rem;
     background: $light;

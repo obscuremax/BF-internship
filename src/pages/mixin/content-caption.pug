@@ -1,0 +1,4 @@
+mixin content-caption(caption, text, className)
+  .content-caption(class=className + "__content-caption")
+    h3.content-caption__caption(class=className + "__caption") #{caption}
+    p.content-caption__subcaption(class=className + "__subcaption") #{text}

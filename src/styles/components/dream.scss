@@ -1,0 +1,63 @@
+@import "../utils/utils";
+@import "../mixins/mixins";
+
+.dream {
+  margin-top: 5.6rem;
+  padding: 4.7rem 0 4.3rem 0;
+  @include media-tablet-horizontal {
+    margin-top: 8.8rem;
+  }
+  @include media-tablet {
+    margin-top: 7.32rem;
+  }
+  @include media-mobile-horizontal {
+    margin-top: 0;
+    padding-top: 8.5rem;
+  }
+  &__title {
+    text-align: start;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.2rem;
+    @include media-tablet-horizontal {
+      align-items: center;
+    }
+    @include media-tablet {
+      flex-wrap: wrap;
+    }
+  }
+  &__content-caption {
+      flex: 0 0 46.5rem;
+      padding-top: 9.5rem;
+      @include media-tablet-horizontal {
+        padding: 0;
+      }
+      @include media-tablet {
+        order: 2;
+        padding-top: 2rem;
+        flex: 1 1 auto;
+      }
+      @include media-mobile-horizontal {
+        padding-top: 3.7rem;
+      }
+  }
+  &__image {
+      flex: 0 1 auto;
+      margin-right: -2rem;
+      @include media-laptop {
+        margin-right: 0;
+      }
+      @include media-tablet {
+        order: 1;
+      }
+      @include media-mobile-horizontal {
+        margin: -1.1rem auto 0;
+      }
+
+
+  }
+
+}
+
