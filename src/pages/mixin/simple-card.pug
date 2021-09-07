@@ -1,0 +1,8 @@
+mixin simple-card(src, title, subtitle, srcset)
+  .simple-card
+    picture.simple-card__head
+      source(media="(max-width: 768px)", srcset=srcset)
+      img.simple-card__icon(src=src, alt="")
+    .simple-card__main
+      h4.simple-card__title #{title}
+      p.simple-card__subtitle #{subtitle}

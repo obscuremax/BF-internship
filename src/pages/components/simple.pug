@@ -1,0 +1,16 @@
+include ../mixin/content-caption
+include ../mixin/simple-card
+
+.simple
+  .container.simple__container
+    h2.title.title--bg.simple__title С нами все просто
+    .simple__content
+      +content-caption("Лучшее решение для роста вашего бизнеса", "ИРИС Ритейл взял лучших на рынке провайдеров технологий, которые способны обеспечить реальный рост выручки малого или среднего предпринимателя-ритейлера", "simple")
+      picture.simple__image
+        source(media="(max-width: 480px)", srcset="../../img/simple-sm.png")
+        img(src="../../img/simple.png", alt="simple")
+    .simple__cards
+      +simple-card("../../img/list.png", "Сценарии «Бизнес роста»", "Выбери сценарий — получи рост на 30% и более", "../../img/list-sm.png")
+      +simple-card("../../img/monitor.png", "Наше ПО", "Проверим вашу ККТ на совместимость с нашим ПО", "../../img/monitor-sm.png")
+      +simple-card("../../img/guy.png", "Обучение", "20 лет работы и экспертизы в  розничном бизнесе", "../../img/guy-sm.png")
+      +simple-card("../../img/cub.png", "Решение из коробки", "Достань, подключи, работай", "../../img/cub-sm.png")
