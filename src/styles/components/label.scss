@@ -1,0 +1,14 @@
+@import "../utils/variables";
+
+.label {
+  font-weight: 600;
+  font-size: $small-bg;
+  line-height: $small-bg;
+  color: $secondary-dark;
+  position: relative;
+  display: block;
+
+  &--mgb {
+    margin-bottom: 5.3rem;
+  }
+}

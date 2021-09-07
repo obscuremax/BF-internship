@@ -1,0 +1,130 @@
+@import "../utils/variables";
+
+.cashbox {
+  padding-top: 5rem;
+  padding-bottom: 8.1rem;
+
+  &_title {
+    font-weight: bold;
+    font-size: $big;
+    line-height: $big;
+    margin-top: -0.7rem;
+  }
+
+  &_section-menu {
+    margin-top: 3.5rem;
+  }
+
+  .subtitle_text {
+    font-size: $small-bg;
+    line-height: $medium;
+    letter-spacing: 0;
+  }
+
+  .subtitle {
+    margin-left: 1.6rem;
+    width: 49.1rem;
+    margin-top: 4rem;
+  }
+
+  &_title-sm {
+    font-weight: bold;
+    font-size: $big;
+    line-height: 4.5rem;
+    margin-top: 0.5rem;
+  }
+
+  &_col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    &--first {
+      align-items: flex-start;
+    }
+
+    &--second {
+      position: relative;
+      right: -68px;
+    }
+  }
+
+  &_inner {
+    display: flex;
+    margin-top: 8.2rem;
+    height: 52.9rem;
+    max-height: 52.9rem;
+    justify-content: space-between;
+  }
+
+
+  &_price {
+    font-weight: bold;
+    font-size: $less-big;
+    line-height: $less-big;
+  }
+}
+
+
+.cashbox-slider {
+  width: 56.5rem;
+  max-width: 56.5rem;
+  height: 45.5rem;
+  max-height: 45.5rem;
+  background: right 41.3% top 43.8% no-repeat url("../../img/fon-white.png"), url("../../img/fon-green.png") 0 0/100% 100% no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5rem;
+  }
+
+  &_content {
+    padding-top: 2rem;
+  }
+
+  &_link {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: #c4c4c4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  &_arroy {
+    path {
+      fill: #59557b;
+    }
+  }
+
+  &_nav {
+    display: flex;
+    margin-top: 5rem;
+  }
+
+  &_circle {
+    width: 0.97rem;
+    height: 0.97rem;
+    border-radius: 50%;
+    background: #c4c4c4;
+    display: block;
+    cursor: pointer;
+
+    & + & {
+      margin-left: 0.6rem;
+    }
+
+    &--active {
+      background: #000000;
+    }
+  }
+}

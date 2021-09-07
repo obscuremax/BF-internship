@@ -1,14 +1,16 @@
 .simple {
+  padding-top: 2.6rem;
+  padding-bottom: 7rem;
+
   &_title {
-    margin-top: 5.8rem;
+    margin-top: -1.1rem;
   }
 
   .section_content {
     margin-top: 8.1rem;
-    margin-bottom: 9.8rem;
   }
 
-  .subtitle {
+  .subtitle_simple {
     margin-left: 0.8rem;
   }
 
@@ -29,6 +31,8 @@
   }
 
   &-cards {
+    margin-top: 9.8rem;
+
     .list {
       display: flex;
       justify-content: space-between;

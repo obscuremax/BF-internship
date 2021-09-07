@@ -1,12 +1,17 @@
 @import "../utils/variables";
 
 .scenario {
+  height: 128.8rem;
+  max-height: 128.8rem;
+  padding-top: 4.8rem;
+  padding-bottom: 7.7rem;
+  position: relative;
+
   &_title {
     font-weight: bold;
     font-size: $big;
     line-height: $big;
-    margin-top: .2rem;
-    margin-bottom: 4.4rem;
+    margin-top: -0.7rem;
   }
 
   &_text {
@@ -14,9 +19,13 @@
     font-size: $medium;
     line-height: $medium;
     margin: 0 auto;
-    margin-top: 6.7rem;
+    margin-top: 5.4rem;
     margin-bottom: 14rem;
     max-width: 89.3rem;
     text-align: center;
+  }
+
+  &_section-menu {
+    margin-top: 2.6rem;
   }
 }

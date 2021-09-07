@@ -1,0 +1,19 @@
+include ../mixin/title
+include ../mixin/section-menu
+
+- let choiceMenu = [{name: "Купить", className: "section-menu_button section-menu_button--active"}, {name: "Аренда", className: "section-menu_button"}, {name: "Наше ПО", className: "section-menu_button"}]
+
+
+
+.choice
+  .container
+    .choice_header
+      +title("Выбери то, что нужно тебе", "choice_title")
+      +section-menu(choiceMenu, "choice_menu")
+      include ../includes/choice-par
+    include ./main-form
+
+
+
+
+

@@ -1,0 +1,18 @@
+include ../mixin/button-close
+.popup.popup--none
+  .popup_inner
+    .popup_title Заявка
+    form#popup-application.footer-form.popup-form(action="#")
+      .footer-form_inner.popup-form_inner
+        label.footer-form_label.popup-form_label(for="popup-city") Город
+          input#popup-city(type="text", name="city" placeholder="Москва" required).footer-form_input.popup-form_input
+        label.footer-form_label.popup-form_label(for="popup-first-name") Имя
+          input#popup-first-name(type="text", name="first-name" placeholder="Иванов Иван Иванович" required).footer-form_input.popup-form_input
+        label.footer-form_label.popup-form_label(for="popup-phone") Телефон
+          input#popup-phone(type="tel", name="phone" placeholder="+7" required).footer-form_input.popup-form_input
+        .footer-form_box.popup-form_box
+          input#popup-checkbox(type="checkbox", name="popup-checkbox" value="agree" checked).footer-form_checkbox.popup-form_checkbox
+          label(for="popup-checkbox").footer-form_label-checkbox.popup-form_label-checkbox Я согласен с условиями сбора и обработки персональных данных
+        input(type="submit", value="Оставить заявку").footer-form_aplication-button.popup-form_aplication-button
+  +button-close("popup_button-close")
+
