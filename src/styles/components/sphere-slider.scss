@@ -1,0 +1,28 @@
+@import "../utils/utils";
+@import "../mixins/mixins";
+
+.sphere-slider {
+  // height: 64rem;
+  &__wrapper {
+
+  }
+  &__slide {
+    // height: calc((100% - 3rem) / 2);
+    overflow: hidden;
+  }
+  &__pagination {
+
+  }
+  &__button-prev {
+
+  }
+  &__button-next {
+
+  }
+
+  .sphere-card {
+    // max-width: 100%;
+    margin: 0 auto;
+  }
+}
+

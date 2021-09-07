@@ -1,0 +1,9 @@
+@import "../mixins/mixins";
+@import "../utils/utils";
+
+.sphere {
+  &__title {
+    color: #3F3D56;
+  }
+}
+

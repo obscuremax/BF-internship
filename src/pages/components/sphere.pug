@@ -1,0 +1,22 @@
+include ../mixin/sphere-card
+
+.sphere
+  .container.sphere__container
+    .h2.title.sphere__title Выбери сферу своего бизнеса
+    .sphere-slider.swiper
+      .sphere-slider__wrapper.swiper-wrapper
+        .sphere-slider__slide.swiper-slide
+          +sphere-card("Торговля продуктами", "../../img/sphere-1.png", "#")
+        .sphere-slider__slide.swiper-slide
+          +sphere-card("Другая торговля", "../../img/sphere-2.png", "#")
+        .sphere-slider__slide.swiper-slide
+          +sphere-card("Общепит", "../../img/sphere-3.png", "#")
+        .sphere-slider__slide.swiper-slide
+          +sphere-card("Услуги", "../../img/sphere-4.png", "#")
+      .sphere-slider__pagination.swiper-pagination
+      .sphere-slider__button-prev.swiper-button-prev
+      .sphere-slider__button-next.swiper-button-next
+
+
+
+

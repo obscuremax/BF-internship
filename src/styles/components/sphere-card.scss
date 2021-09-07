@@ -1,0 +1,38 @@
+@import "../utils/utils";
+@import "../mixins/mixins";
+
+.sphere-card {
+  width: 52.5rem;
+  height: 30.5rem;
+  border: 1.5px solid #3f3d56;
+  border-radius: 0.73rem;
+  background: $success;
+  box-shadow: 0px 0px 1.04139px rgba(0, 0, 0, 0.08), 0px 1.04139px 12.4967px rgba(0, 0, 0, 0.08);
+  padding-top: 4rem;
+  padding-left: 3rem;
+  position: relative;
+
+  &__title {
+    @include font-size(4rem, 1.2rem);
+    font-weight: 600;
+  }
+  &__img {
+    position: absolute;
+    bottom: .8rem;
+    right: 2.8rem;
+  }
+
+  &__btn {
+    width: 5rem;
+    height: 5rem;
+    background: $light;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    left: 3.3rem;
+    bottom: 2.3rem;
+  }
+}
