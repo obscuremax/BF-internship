@@ -1,0 +1,83 @@
+@import "../utils/utils";
+@import "../mixins/mixins";
+
+.scenario-card {
+  display: flex;
+
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  @include media-tablet-horizontal {
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+
+  }
+  &__img {
+    flex: 0 0 52.5rem;
+    background: $success;
+    border-radius: .7rem;
+    @include media-tablet-horizontal {
+      width: 100%;
+      background: none;
+    }
+    @include media-tablet {
+      flex: 1 1 100%;
+    }
+    img {
+      @include media-tablet-horizontal {
+        width: 100%;
+      }
+    }
+  }
+  &__content {
+    flex: 1 1 auto;
+    max-width: 45.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include media-tablet-horizontal {
+      max-width: 100%;
+      margin-top: 5rem;
+    }
+  }
+  &__content-caption {
+  }
+  &__caption {
+    @include font("Source Sans Pro", 600);
+    @include font-size($medium-bg, $medium);
+    &::after {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+    @include media-mobile-horizontal {
+      @include font-size($medium-sm, $medium);
+    }
+  }
+  &__subcaption {
+    @include font-size($medium-sm, $medium);
+
+    @include media-mobile-horizontal {
+      @include font-size(1.8rem, $medium);
+    }
+  }
+  &__btn {
+    border-radius: .7rem;
+    background: $success;
+    width: 27.5rem;
+    height: 6.3rem;
+    font-weight: 600;
+    font-size: $medium-sm;
+    line-height: 6.3rem;
+    text-align: center;
+    margin-top: 4rem;
+    cursor: pointer;
+    @include media-tablet-horizontal {
+      margin: 5rem auto 0;
+    }
+    @include media-mobile-horizontal {
+      margin-top: 2.8rem;
+      width: 100%;
+      font-size: 1.8rem;
+    }
+  }
+}

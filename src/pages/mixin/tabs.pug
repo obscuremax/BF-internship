@@ -1,0 +1,9 @@
+mixin tabs(arr, className)
+  ul.tabs(class=className + "__tabs")
+    each el, i in arr
+      if i == 0
+        li.tabs__item.tabs__item--active(class=className + "__tabs-item")
+          p.tabs__text(class=className + "__tabs-text") #{el}
+      else
+        li.tabs__item(class=className + "__tabs-item")
+          p.tabs__text(class=className + "__tabs-text") #{el}
