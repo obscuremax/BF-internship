@@ -2,7 +2,7 @@
 @import "../mixins/mixins";
 
 .sphere-card {
-  width: 52.5rem;
+  max-width: 52.5rem;
   height: 30.5rem;
   border: 1.5px solid #3f3d56;
   border-radius: 0.73rem;
@@ -11,15 +11,45 @@
   padding-top: 4rem;
   padding-left: 3rem;
   position: relative;
-
+  margin: 0 auto;
+  flex: 1 1 45%;
+  @include media-mobile-horizontal {
+    flex: 0 1 100%;
+    height: 19.7rem;
+    padding-top: 2.5rem;
+    padding-left: 2.1rem;
+  }
   &__title {
     @include font-size(4rem, 1.2rem);
     font-weight: 600;
+    @include media-tablet-horizontal {
+      @include font-size(2.6rem, 1.2rem);
+    }
+    @include media-mobile-horizontal {
+      @include font-size(2.55rem, .7rem);
+      color: $light;
+    }
+    @include media-mobile {
+      font-size: 2.2rem;
+    }
+
+
   }
   &__img {
     position: absolute;
     bottom: .8rem;
     right: 2.8rem;
+    @include media-tablet-horizontal {
+      width: 65%;
+    }
+    @include media-mobile-horizontal {
+      bottom: 1.6rem;
+      right: 1.8rem;
+      img {
+        margin-left: auto;
+      }
+    }
+
   }
 
   &__btn {
@@ -34,5 +64,15 @@
     position: absolute;
     left: 3.3rem;
     bottom: 2.3rem;
+    @include media-mobile-horizontal {
+      width: 3.2rem;
+      height: 3.2rem;
+      left: 2.1rem;
+      bottom: 1.7rem;
+      img {
+        width: 1.33rem;
+        height: 1.15rem;
+      }
+    }
   }
 }

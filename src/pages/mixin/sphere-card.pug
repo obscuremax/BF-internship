@@ -2,7 +2,7 @@ mixin sphere-card(title, src, srcset)
   .sphere-card
     h3.sphere-card__title #{title}
     picture.sphere-card__img
-      source(media="(max-width: 666px)", srcset=srcset)
+      source(media="(max-width: 480px)", srcset=srcset)
       img(src=src, alt="")
     .sphere-card__btn
       img(src="../../img/arr-r.svg", alt="arr").sphere-card__arrow

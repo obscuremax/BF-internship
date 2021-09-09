@@ -1,20 +1,30 @@
-new Swiper('.sphere-slider', {
+const sphereSlider = new Swiper('.sphere-slider', {
+  slidesPerView: 2,
+  slidesPerColumn: 2,
+  slidesPerGroup: 2,
+  spaceBetween: 30,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
   pagination: {
-    el: '.sphere-slider__pagination',
+    el: '.swiper-pagination',
     type: 'bullets',
-    clickable: true
+    clickable: true,
   },
-  grabCursor: true,
-  slidesPerView: 2,
-  spaceBetween: 30,
-  slidesPerGroup: 2,
-  autoHeight: false,
-  slidesPerColumn: 2,
-  loop: true,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      slidesPerColumn: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 0,
+    },
+    769: {
+      slidesPerView: 1,
+      slidesPerColumn: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 0,
+    },
+  },
 });
-
 
