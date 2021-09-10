@@ -64,3 +64,20 @@ const scenarioSlider = new Swiper('.scenario-slider', {
   },
 });
 
+const cashSlider = new Swiper('.cash-slider', {
+  slidesPerView: 1,
+  slidesPerColumn: 1,
+  slidesPerGroup: 1,
+  centeredSlides: true,
+  navigation: {
+    nextEl: '.cash-slider__button-next',
+    prevEl: '.cash-slider__button-prev',
+  },
+  pagination: {
+    el: '.cash-slider__pagination',
+    type: 'bullets',
+    clickable: true,
+  },
+  loop: true,
+});
+

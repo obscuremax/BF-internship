@@ -5,7 +5,7 @@ include ../mixin/content-caption
     h1 Title
     h2.title.title--bg.dream__title Мечта предпринимателя
     .dream__content
-      +content-caption("Твой рост, наша цель!", "То, что раньше было у крупного бизнеса, теперь доступно тебе", "dream")
+      +content-caption("Твой рост, наша цель!", ["То, что раньше было у крупного бизнеса, теперь доступно тебе"], "dream")
       picture.dream__image
         source(media="(max-width: 480px)", srcset="../../img/dream-sm.png")
         img(src="../../img/dream.png", alt="dream")
