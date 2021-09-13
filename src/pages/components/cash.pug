@@ -2,7 +2,7 @@ include ../mixin/tabs
 include ../mixin/content-caption
 
 
-- let cashTabs = ["О кассе", "Видео", "Характеристики"]
+- let cashTabs = [{tabName: "О кассе"}, {tabName: "Видео"}, {tabName: "Характеристики"}]
 
 .cash
   .container.cash__container
@@ -11,7 +11,7 @@ include ../mixin/content-caption
       +tabs(cashTabs, "cash")
       p.cash__text Выбери решение, которое максимально подходит твоему бизнесу, и посмотри прогнозируемый рост выручки
     .cash__name.cash__name--none НЕВА — 01 — Ф
-    .cash-card
+    .cash-card.cash-card--active
       .cash-card__title.cash__name НЕВА — 01 — Ф
       .cash-card__content
         +content-caption("Идеальное решение для малого бизнеса", ["Устройство работает на базе Android, оснащена семидюймовым сенсорным экраном, портами USB, Ethernet и сетевыми проотколами GPRS, Wi-Fi, Bluetooth", "Кассовое ядро позволяет интегрировать с ККТ Нева — 01 — Ф любые сторонние приложения"], "cash-card")

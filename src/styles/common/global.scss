@@ -101,6 +101,13 @@ picture {
   }
 }
 
+._is-hidden {
+  display: none;
+}
+._is-not-hidden {
+  display: block;
+}
+
 
 // .title {
 //   font-weight: bold;
