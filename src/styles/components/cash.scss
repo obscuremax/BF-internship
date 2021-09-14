@@ -102,8 +102,6 @@
       margin-top: 2.7rem;
     }
   }
-  &__content-caption {
-  }
   &__caption {
     @include font("open Sans", 600);
     @include font-size($less-big, $less-big);

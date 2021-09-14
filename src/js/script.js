@@ -82,6 +82,15 @@ const cashSlider = new Swiper('.cash-slider', {
 });
 
 const label = document.querySelector('.label--add');
+const popUpForm = document.getElementById('pop-up');
+const footerForm = document.getElementById('footer-form');
+
+// ==== input mask ====//
+const inputsTel = document.querySelectorAll('input[type="tel"]');
+const inputMask = new Inputmask('+375 (99) 999-99-99');
+inputMask.mask(inputsTel);
+
+// ==== \input mask ===//
 
 document.addEventListener('click', (e) => {
   if (e.target.closest('#price-range')) {
@@ -91,10 +100,19 @@ document.addEventListener('click', (e) => {
   const cashSpecifications = document.querySelector('.cash-specifications');
   const labelCross = e.target.closest('.label__cross');
   const btnAddLabel = e.target.closest('.btn-add');
-
+  const popUp = document.querySelector('.pop-up-wrap');
   const tabsItems = e.target.parentElement.closest('.tabs');
   const tabsItem = e.target.parentElement.closest('.tabs__item');
-
+  if (
+    e.target.closest('.choice-card__btn') ||
+    e.target.closest('.cash-card__btn') ||
+    e.target.closest('.scenario-card__btn')
+  ) {
+    addClassList(popUp, 'pop-up-wrap--active');
+  }
+  if (e.target.closest('.pop-up__cross')) {
+    removeClassList(popUp, 'pop-up-wrap--active');
+  }
   if (labelCross) {
     deleteLabel(labelCross);
   }
@@ -130,6 +148,20 @@ document.addEventListener('input', (e) => {
   const inputRange = e.target.closest('#price-range');
   const inputPrice = document.getElementById('price');
   inputPrice.setAttribute('value', inputRange.value + ' 000 руб/мес');
+});
+
+formsValidate('.pop-up__form', {
+  city: { required: true },
+  fio: { required: true },
+  tel: { required: true },
+  agree: { required: true },
+});
+
+formsValidate('.footer__form', {
+  city: { required: true },
+  fio: { required: true },
+  tel: { required: true },
+  agree: { required: true },
 });
 
 function deleteLabel(el) {
@@ -188,4 +220,27 @@ function constructor(el) {
   constructorText.innerHTML = constructortext;
   blockText.innerHTML = blocktext;
   blockPrice.innerHTML = blockprice;
+}
+
+function formsValidate(selector, rules) {
+  new window.JustValidate(selector, {
+    rules,
+    submitHandler(form, values, ajax) {
+      console.log(form);
+      const formData = new FormData(form);
+
+      fetch('#', {
+        method: 'POST',
+        body: formData,
+      }).then(function (data) {
+        console.log(data);
+        console.log('Send');
+        form.reset();
+        const popUp = document.querySelector('.pop-up-wrap');
+        if (popUp.closest('.pop-up-wrap--active')) {
+          removeClassList(popUp, 'pop-up-wrap--active');
+        }
+      });
+    },
+  });
 }
