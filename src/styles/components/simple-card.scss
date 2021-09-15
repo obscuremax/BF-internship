@@ -1,10 +1,12 @@
 @import "../utils/utils";
+
 @import "../mixins/mixins";
 
 .simple-card {
   position: relative;
   flex: 1 1 25%;
   padding-top: 4.2rem;
+
   @include media-laptop {
     column-gap: 30px;
   }
@@ -16,15 +18,16 @@
   @include media-tablet {
     padding-top: 2.67rem;
   }
+
   @include media-mobile-horizontal {
     flex: 0 1 15.72rem;
   }
-  &__head {
 
+  &__head {
     width: 7.9rem;
     height: 7.9rem;
     border-radius: 50%;
-    border: .3rem solid $light-dark;
+    border: 0.3rem solid $light-dark;
     background: $success, $light-dark;
     display: flex;
     justify-content: center;
@@ -33,12 +36,12 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+
     @include media-tablet {
       height: 4.85rem;
       width: 4.85rem;
-      border: .2rem solid $light-dark;
+      border: 0.2rem solid $light-dark;
     }
-
   }
 
   &__main {
@@ -46,47 +49,61 @@
     height: 21.1rem;
     border-radius: 1rem;
     background: $success;
+
     @include media-tablet {
       padding-top: 3.3rem;
       height: 13.46rem;
-      padding-left: .5rem;
-      padding-right: .5rem;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
     }
   }
+
   &__title {
+
     @include font-size($small-bg, $small-bg);
+
     font-weight: 600;
     text-align: center;
     height: 4rem;
     position: relative;
 
     @include media-tablet {
+
       @include font-size(1.2rem, 1.3rem);
+
       height: 2.5rem;
     }
-    &::after {
-      content: "";
-      display: block;
-      width: 20.9rem;
-      max-width: 20.9rem;
-      height: .3rem;
-      background: #B4ABAB;
-      position: absolute;
-      top: 5.3rem;
-      left: 50%;
-      transform: translateX(-50%);
-      @include media-tablet {
-        max-width: 13.3rem;
-        top: 3rem;
-      }
+  }
+
+  &__title::after {
+    content: "";
+    display: block;
+    width: 20.9rem;
+    max-width: 20.9rem;
+    height: 0.3rem;
+    background: #b4abab;
+    position: absolute;
+    top: 5.3rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include media-tablet {
+      max-width: 13.3rem;
+      top: 3rem;
     }
   }
+
   &__subtitle {
+
     @include font-size($small-bg, $medium-sm);
+
     text-align: center;
     margin-top: 2.6rem;
+
     @include media-tablet {
+
       @include font-size(1.2rem, 1.6rem);
+
       margin-top: 1.5rem;
     }
   }

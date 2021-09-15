@@ -1,29 +1,35 @@
 @import "../mixins/mixins";
+
 @import "../utils/utils";
 
 .sphere {
   padding-top: 4.1rem;
   padding-bottom: 4rem;
+
   @include media-mobile-horizontal {
     padding-top: 3.1rem;
     padding-bottom: 1rem;
   }
+
   &__title {
-    color: #3F3D56;
+    color: #3f3d56;
 
     @include media-mobile-horizontal {
+
       @include font-size(3rem, 3rem);
+
       color: $primary;
       text-align: start;
-      letter-spacing: -.01rem;
+      letter-spacing: -0.01rem;
       padding-top: 0;
     }
-
   }
+
   &__container-bg {
     margin: 10.8rem auto 0;
     max-width: 120.5rem;
     position: relative;
+
     @include media-laptop {
       max-width: 100rem;
     }
@@ -41,5 +47,4 @@
     }
   }
 }
-
 

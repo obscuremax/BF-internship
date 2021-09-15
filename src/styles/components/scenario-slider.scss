@@ -1,4 +1,5 @@
 @import "../utils/utils";
+
 @import "../mixins/mixins";
 
 .scenario-slider {
@@ -9,56 +10,67 @@
   @include media-tablet-horizontal {
     height: 88rem;
   }
+
   @include media-tablet {
     height: 75rem;
   }
+
   @include media-mobile-horizontal {
     height: 63rem;
   }
 
   &__slide--even .scenario-card {
     flex-direction: row;
+
     @include media-tablet-horizontal {
       flex-direction: column;
     }
-    .scenario-card__img {
-      margin-right: 2rem;
-      @include media-tablet-horizontal {
-        margin-right: 0;
-      }
-    }
-
   }
+
+  &__slide--even .scenario-card__img {
+    margin-right: 2rem;
+
+    @include media-tablet-horizontal {
+      margin-right: 0;
+    }
+  }
+
   &__pagination {
     position: static !important;
-    display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 2rem;
     display: none;
+
     @include media-tablet {
       display: block;
     }
+
     @include media-mobile-horizontal {
       position: absolute !important;
       top: 23rem;
       left: 50%;
       transform: translateX(-50%) !important;
     }
+
     @include media-mobile {
       top: 21rem;
     }
+
     .swiper-pagination-bullet {
       width: 1rem;
       height: 1rem;
     }
+
     & > .swiper-pagination-bullet:not(:last-child) {
       margin-right: 0.6rem;
     }
+
     .swiper-pagination-bullet-active {
       background: #3dd081;
     }
   }
+
   &__button-prev,
   &__button-next {
     display: flex;
@@ -68,17 +80,21 @@
     min-width: 5rem;
     min-height: 5rem;
     border-radius: 50%;
-    background: $secondary !important;
+    background-color: $secondary !important;
+
     @include media-tablet {
       display: none;
     }
+
     path {
       fill: $light;
     }
+
     &:hover {
       opacity: 0.5;
     }
   }
+
   &__button-prev {
     left: 0 !important;
 
@@ -86,18 +102,22 @@
       transform: rotate(180deg);
     }
   }
+
   &__button-next {
     right: 0 !important;
   }
 
   .swiper-wrapper {
     flex-wrap: wrap;
+
     @include media-tablet-horizontal {
       flex-wrap: nowrap;
     }
   }
+
   .swiper-slide {
     height: calc((100% - 7.8rem) / 2);
+
     @include media-tablet-horizontal {
       height: 100%;
     }

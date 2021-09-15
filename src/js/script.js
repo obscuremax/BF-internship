@@ -82,8 +82,6 @@ const cashSlider = new Swiper('.cash-slider', {
 });
 
 const label = document.querySelector('.label--add');
-const popUpForm = document.getElementById('pop-up');
-const footerForm = document.getElementById('footer-form');
 
 // ==== input mask ====//
 const inputsTel = document.querySelectorAll('input[type="tel"]');
@@ -126,18 +124,18 @@ document.addEventListener('click', (e) => {
   }
   if (tabsItem) {
     addClassList(tabsItem, 'tabs__item--active');
-    if (tabsItem.children[0].innerHTML == 'Характеристики') {
+    if (tabsItem.children[0].innerHTML === 'Характеристики') {
       removeClassList(cashCard, 'cash-card--active');
       addClassList(cashSpecifications, 'cash-specifications--active');
     }
-    if (tabsItem.children[0].innerHTML == 'О&nbsp;кассе') {
+    if (tabsItem.children[0].innerHTML === 'О&nbsp;кассе') {
       addClassList(cashCard, 'cash-card--active');
       removeClassList(cashSpecifications, 'cash-specifications--active');
     }
     if (
-      tabsItem.children[0].innerHTML == 'Купить' ||
-      tabsItem.children[0].innerHTML == 'Аренда' ||
-      tabsItem.children[0].innerHTML == 'Наше&nbsp;ПО'
+      tabsItem.children[0].innerHTML === 'Купить' ||
+      tabsItem.children[0].innerHTML === 'Аренда' ||
+      tabsItem.children[0].innerHTML === 'Наше&nbsp;ПО'
     ) {
       constructor(tabsItem);
     }
@@ -206,7 +204,7 @@ function constructor(el) {
   select.innerHTML = '';
 
   options.forEach((el, i) => {
-    if (i == 0) {
+    if (i === 0) {
       el.value = option;
       el.innerHTML = option;
       select.innerHTML = el.outerHTML;
@@ -225,16 +223,13 @@ function constructor(el) {
 function formsValidate(selector, rules) {
   new window.JustValidate(selector, {
     rules,
-    submitHandler(form, values, ajax) {
-      console.log(form);
+    submitHandler(form) {
       const formData = new FormData(form);
 
       fetch('#', {
         method: 'POST',
         body: formData,
       }).then(function (data) {
-        console.log(data);
-        console.log('Send');
         form.reset();
         const popUp = document.querySelector('.pop-up-wrap');
         if (popUp.closest('.pop-up-wrap--active')) {

@@ -48,6 +48,7 @@ h1 {
 .container {
   max-width: 108rem;
   margin: 0 auto;
+
   @include media-laptop {
     max-width: 100rem;
   }
@@ -63,6 +64,7 @@ h1 {
   @include media-mobile-horizontal {
     max-width: 33.5rem;
   }
+
   @include media-mobile {
     max-width: 30rem;
   }
@@ -78,21 +80,25 @@ h1 {
 
 .title {
   font-weight: bold;
-  @include font-size($big, $big);
-  text-align: center;
-  margin-top: -.9rem;
 
+  @include font-size($big, $big);
+
+  text-align: center;
+  margin-top: -0.9rem;
 }
 
 .title--bg {
+
   @include font-size($biggest, $biggest);
+
   @include media-tablet {
     font-size: 4.5rem;
   }
+
   @include media-mobile-horizontal {
+
     @include font-size($medium, $medium-bg);
   }
-
 }
 
 picture {
@@ -104,6 +110,7 @@ picture {
 ._is-hidden {
   display: none;
 }
+
 ._is-not-hidden {
   display: block;
 }
@@ -152,18 +159,19 @@ picture {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+
   @include media-mobile-horizontal {
-    max-width:  33.5rem;
+    max-width: 33.5rem;
   }
 
   @include media-mobile {
-    max-width:  30rem;
+    max-width: 30rem;
   }
 
   &__button {
     height: 8.3rem;
     background: $light;
-    border-radius: .7rem;
+    border-radius: 0.7rem;
     width: 38.4rem;
     display: block;
     text-align: center;
@@ -172,36 +180,54 @@ picture {
     font-size: $medium-sm;
     color: $primary;
     margin-top: 4.8rem;
+
     &:hover {
       background-color: darken($light, 5%);
       cursor: pointer;
     }
+
     @include media-mobile-horizontal {
       width: 33.5rem;
       height: 6.3rem;
       font-weight: 600;
       margin-top: 3rem;
+
       @include font-size(1.8rem, 1.8rem);
     }
+
     @include media-mobile {
-      max-width:  30rem;
+      max-width: 30rem;
     }
   }
 }
 
 .input {
   background: $light;
-  border-radius: .7rem;
+  border-radius: 0.7rem;
   height: 7rem;
   display: block;
   border: 0;
-  padding-left: .8rem;
+  padding-left: 0.8rem;
+
   @include font-size($medium-sm, $medium-sm);
+
   outline: none;
   letter-spacing: 1px;
+
   @include media-mobile-horizontal {
+
     @include font-size(1.8rem, 2.2rem);
+
     height: 5rem;
-    border-radius: .6rem;
+    border-radius: 0.6rem;
   }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-image: none !important;
+  background: rgba(196, 196, 196, 0.8) !important;
+  width: 5rem !important;
+  height: 5rem !important;
+  border-radius: 50%;
 }

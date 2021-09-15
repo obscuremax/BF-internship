@@ -1,13 +1,16 @@
 @import "../utils/utils";
+
 @import "../mixins/mixins";
 
 .tabs {
   display: flex;
   align-items: center;
   justify-content: center;
+
   @include media-tablet-horizontal {
     justify-content: space-around;
   }
+
   @include media-mobile-horizontal {
     justify-content: space-between;
   }
@@ -16,45 +19,55 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-
     border-radius: 2rem;
     height: 5.3rem;
     padding: 0 2rem;
+
     @include media-mobile-horizontal {
-      padding: 0 .5rem;
+      padding: 0 0.5rem;
       height: 4rem;
     }
-    & + & {
-      margin-left: 7rem;
-      @include media-tablet-horizontal {
-        margin-left: 0;
-      }
-    }
+
     &:hover {
       cursor: pointer;
       background: $success;
       opacity: 0.7;
     }
-    &--active {
-      background: $success;
-      &:hover {
-        cursor: default;
-        opacity: 1;
-      }
-    }
-
   }
+
+  &__item + &__item {
+    margin-left: 7rem;
+
+    @include media-tablet-horizontal {
+      margin-left: 0;
+    }
+  }
+
+  &__item--active {
+    background: $success;
+
+    &:hover {
+      cursor: default;
+      opacity: 1;
+    }
+  }
+
   &__text {
+
     @include font-size($medium-bg, $medium-bg);
+
     font-weight: 600;
     text-align: center;
+
     @include media-tablet {
       font-size: $small-bg;
     }
+
     @include media-mobile-horizontal {
+
       @include font-size(1.8rem, 2rem);
     }
+
     @include media-mobile {
       font-size: 1.5rem;
     }

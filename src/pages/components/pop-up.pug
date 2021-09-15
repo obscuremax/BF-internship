@@ -13,7 +13,7 @@ include ../mixin/cross
         label.label.pop-up__label Телефон
           input.input#phone.pop-up__input(type="tel" placeholder="+7" name="phone" required data-validate-field="tel")
         label.pop-up__agree-label
-          input#pop-up-agree(type="checkbox" name="agree" checked data-validate-field="agree")
+          input#pop-up-agree(type="checkbox" name="agree" checked data-validate-field="agree").pop-up__agree-input
           span.pop-up__agree-fake
           span.pop-up__agree-text Я согласен с условиями сбора и обработки персональных данных
         input#pop-up-btn(type="submit", value="Оставить заявку").pop-up__btn

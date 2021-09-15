@@ -1,4 +1,5 @@
 @import "../utils/utils";
+
 @import "../mixins/mixins";
 
 .header__list-item {
@@ -9,6 +10,7 @@
 
 .header__link {
   color: $primary;
+
   &:hover:not(&--active) {
     color: lighten($primary, 50%);
     cursor: pointer;
@@ -21,10 +23,9 @@
       content: "";
       position: relative;
       display: block;
-      height: .2rem;
+      height: 0.2rem;
       background-color: $primary-light;
-      top: .6rem;
+      top: 0.6rem;
     }
-
   }
 }

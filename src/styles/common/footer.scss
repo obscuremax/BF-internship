@@ -1,15 +1,20 @@
 @import "../utils/utils";
+
 @import "../mixins/mixins";
+
 .footer {
   background: $success;
   padding: 21.2rem 0 7.5rem 0;
   position: relative;
+
   @include media-tablet {
     padding: 12rem 0 4rem 0;
   }
+
   @include media-mobile-horizontal {
     padding: 6.2rem 0 8.5rem 0;
   }
+
   &::before {
     content: "";
     display: block;
@@ -21,136 +26,171 @@
     border-left-width: 50vw;
     border-right-width: 50vw;
     border-top: 7.5rem solid $light-dark;
+
     @include media-mobile-horizontal {
       border-top: 4rem solid $light-dark;
     }
   }
+
   &__container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
+
   &__head {
     flex: 0 1 58.1rem;
     display: flex;
     flex-direction: column;
+
     @include media-tablet-horizontal {
       margin: 0 auto;
     }
   }
+
   &__title {
     font-size: $biggest;
     line-height: 110%;
+
     @include media-tablet-horizontal {
       text-align: center;
     }
+
     @include media-tablet {
       font-size: 4.3rem;
     }
+
     @include media-mobile-horizontal {
       font-weight: 600;
       font-size: 3rem;
       line-height: 110%;
       text-align: start;
     }
+
     @include media-mobile {
       text-align: center;
     }
   }
+
   &__logo {
     margin-top: 4.9rem;
+
     @include media-tablet-horizontal {
       margin: 5rem auto;
     }
+
     @include media-mobile-horizontal {
       display: none;
     }
   }
+
   &__logo-one {
     display: none;
+
     @include media-mobile-horizontal {
       display: block;
       margin: 3rem auto 0;
     }
   }
+
   &__form {
     flex: 0 0 38.3rem;
     margin-top: -0.9rem;
+
     @include media-tablet-horizontal {
       margin: 0 auto;
     }
+
     @include media-mobile-horizontal {
       margin-top: 6rem;
     }
+
     @include media-mobile {
       margin-top: 4rem;
     }
   }
+
   &__contacts {
     flex: 0 1 60.5rem;
     display: flex;
     justify-content: space-between;
     margin-top: 6.5rem;
+
     @include media-tablet-horizontal {
       margin: 4rem auto;
     }
+
     @include media-mobile-horizontal {
       flex-direction: column-reverse;
       margin-bottom: 3rem;
     }
   }
+
   &__contact {
     display: flex;
     flex-direction: column;
+  }
+
+  &__contact:first-child {
+
     @include media-mobile-horizontal {
-      &:first-child {
-        margin-top: 2.5rem;
-      }
+      margin-top: 2.5rem;
     }
   }
+
   &__action {
     font-size: $smallest;
     line-height: 110%;
     color: $primary;
     opacity: 0.7;
     margin-bottom: 1.4rem;
+
     @include media-mobile-horizontal {
       font-size: 1.4rem;
-      line-height: 110%;
     }
   }
+
   &__action-link {
+
     @include font-size($medium, $medium);
+
     color: $primary;
     border-bottom: 0.1rem solid $primary;
     padding-bottom: 0.5rem;
+
     &:hover {
       color: lighten($primary, 40%);
     }
+
     @include media-tablet {
       font-size: 2.5rem;
     }
+
     @include media-mobile-horizontal {
+
       @include font-size(3rem, 3rem);
+
       width: max-content;
     }
   }
+
   &__tail {
     flex: 1 1 100%;
     max-width: 61.8rem;
     font-size: $small;
     line-height: 120%;
     opacity: 0.7;
-    margin-top: 4.1rem;
     margin-left: 0.3rem;
     margin-top: 4rem;
+
     @include media-tablet-horizontal {
       margin: 0 auto;
     }
+
     @include media-mobile-horizontal {
       font-size: 1.2rem;
       line-height: 120%;
     }
   }
-
 }
+

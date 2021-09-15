@@ -1,4 +1,5 @@
 @import "../mixins/mixins";
+
 @import "../utils/utils";
 
 .scenario {
@@ -8,52 +9,68 @@
   @include media-tablet {
     padding-top: 2rem;
   }
+
   @include media-mobile-horizontal {
     padding-top: 1.1rem;
   }
+
   &__head {
     display: flex;
     flex-direction: column;
   }
+
   &__title {
+
     @include media-mobile-horizontal {
+
       @include font-size($medium, $medium);
+
       text-align: start;
     }
   }
+
   &__tabs {
     margin-top: 2.6rem;
+
     @include media-mobile-horizontal {
       order: 3;
       flex-direction: row-reverse;
       margin-top: 3.9rem;
     }
   }
+
   &__text {
     margin: 5.5rem auto 0;
     font-weight: 600;
+
     @include font-size($medium, $medium);
+
     text-align: center;
     max-width: 89.3rem;
+
     @include media-tablet-horizontal {
+
       @include font-size($medium-sm, $medium-sm);
     }
+
     @include media-tablet {
       font-size: 2.5rem;
       margin-top: 3rem;
       text-align: justify;
       letter-spacing: -1.2px;
     }
+
     @include media-mobile-horizontal {
+
       @include font-size(1.8rem, $medium);
     }
-
   }
 
   &__container-bg {
     margin: 13.9rem auto 0;
     max-width: 120.5rem;
     position: relative;
+
     @include media-laptop {
       max-width: 100rem;
     }
