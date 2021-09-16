@@ -3,12 +3,14 @@
   height: 6rem;
   cursor: pointer;
   overflow: hidden;
+  display: block;
 
   &__inner {
     width: 6rem;
     height: 6rem;
     position: relative;
     transform: rotate(45deg);
+    display: block;
   }
 
   &__line {

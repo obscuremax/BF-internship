@@ -5,13 +5,13 @@ include ../mixin/cross
     .pop-up__container
       .pop-up__title Заявка
       +cross("pop-up")
-      form#pop-up(action="" method="method").pop-up__form
+      form#pop-up(action="#" method="post").pop-up__form
         label.label.pop-up__label Город
-          input.input#city.pop-up__input(type="text" placeholder="Москва" name="city" required title="qwerty" data-validate-field="city")
+          input.input#city-popup.pop-up__input(type="text" placeholder="Москва" name="city" required title="qwerty" data-validate-field="city")
         label.label.pop-up__label Имя
-          input.input#name.pop-up__input(type="text" placeholder="Иванов Иван Иванович" name="fio" required data-validate-field="fio")
+          input.input#name-popup.pop-up__input(type="text" placeholder="Иванов Иван Иванович" name="fio" required data-validate-field="fio")
         label.label.pop-up__label Телефон
-          input.input#phone.pop-up__input(type="tel" placeholder="+7" name="phone" required data-validate-field="tel")
+          input.input#phone-popup.pop-up__input(type="tel" placeholder="+7" name="phone" required data-validate-field="tel")
         label.pop-up__agree-label
           input#pop-up-agree(type="checkbox" name="agree" checked data-validate-field="agree").pop-up__agree-input
           span.pop-up__agree-fake
