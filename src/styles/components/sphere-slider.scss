@@ -16,7 +16,7 @@
   }
 
   &__pagination {
-    position: static !important;
+    position: static;
     align-items: center;
     justify-content: center;
     margin-top: 2rem;
@@ -31,7 +31,7 @@
       height: 1rem;
     }
 
-    & > .swiper-pagination-bullet:not(:last-child) {
+    > .swiper-pagination-bullet:not(:last-child) {
       margin-right: 0.6rem;
     }
 
@@ -45,11 +45,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: none !important;
+    background-image: none;
     min-width: 5rem;
     min-height: 5rem;
     border-radius: 50%;
-    background-color: $secondary !important;
+    background-color: $secondary;
 
     @include media-tablet {
       display: none;
@@ -65,7 +65,7 @@
   }
 
   &__button-prev {
-    left: 0 !important;
+    left: 0;
 
     svg {
       transform: rotate(180deg);
@@ -73,7 +73,7 @@
   }
 
   &__button-next {
-    right: 0 !important;
+    right: 0;
   }
 
   .swiper-wrapper {

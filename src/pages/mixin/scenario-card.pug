@@ -3,7 +3,7 @@ include ../mixin/content-caption
 mixin scenario-card(src, srcset, caption, subcaption, className)
   .scenario-card
     picture.scenario-card__img
-      source(media="(max-width: 480)", srcset=srcset)
+      source(media="(max-width: 480px)", srcset=srcset)
       img(src=src, alt="")
     .scenario-card__content
       +content-caption(caption, subcaption, className)

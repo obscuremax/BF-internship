@@ -1,34 +1,40 @@
-const sphereSlider = new Swiper('.sphere-slider', {
-  slidesPerView: 2,
-  slidesPerColumn: 2,
-  slidesPerGroup: 2,
-  spaceBetween: 30,
-  navigation: {
-    nextEl: '.sphere-slider__button-next',
-    prevEl: '.sphere-slider__button-prev',
-  },
-  pagination: {
-    el: '.sphere-slider__pagination',
-    type: 'bullets',
-    clickable: true,
-  },
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-      slidesPerColumn: 1,
-      slidesPerGroup: 1,
-      spaceBetween: 0,
+// eslint-disable-next-line no-unused-vars
+const sphereSlider =
+  // eslint-disable-next-line no-undef
+  new Swiper('.sphere-slider', {
+    slidesPerView: 2,
+    slidesPerColumn: 2,
+    slidesPerGroup: 2,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: '.sphere-slider__button-next',
+      prevEl: '.sphere-slider__button-prev',
     },
-    769: {
-      slidesPerView: 1,
-      slidesPerColumn: 1,
-      slidesPerGroup: 1,
-      spaceBetween: 0,
+    pagination: {
+      el: '.sphere-slider__pagination',
+      type: 'bullets',
+      clickable: true,
     },
-  },
-});
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        slidesPerColumn: 1,
+        slidesPerGroup: 1,
+        spaceBetween: 0,
+      },
+      769: {
+        slidesPerView: 1,
+        slidesPerColumn: 1,
+        slidesPerGroup: 1,
+        spaceBetween: 0,
+      },
+    },
+  });
 
-const scenarioSlider = new Swiper('.scenario-slider', {
+// eslint-disable-next-line no-unused-vars
+const scenarioSlider =
+// eslint-disable-next-line no-undef
+new Swiper('.scenario-slider', {
   slidesPerView: 1,
   slidesPerColumn: 2,
   slidesPerGroup: 1,
@@ -64,7 +70,10 @@ const scenarioSlider = new Swiper('.scenario-slider', {
   },
 });
 
-const cashSlider = new Swiper('.cash-slider', {
+// eslint-disable-next-line no-unused-vars
+const cashSlider =
+// eslint-disable-next-line no-undef
+new Swiper('.cash-slider', {
   slidesPerView: 1,
   slidesPerColumn: 1,
   slidesPerGroup: 1,
@@ -85,6 +94,7 @@ const label = document.querySelector('.label--add');
 
 // ==== input mask ====//
 const inputsTel = document.querySelectorAll('input[type="tel"]');
+// eslint-disable-next-line no-undef
 const inputMask = new Inputmask('+375 (99) 999-99-99');
 inputMask.mask(inputsTel);
 
@@ -203,14 +213,14 @@ function constructor(el) {
   firstLabel.textContent = labelname;
   select.innerHTML = '';
 
-  options.forEach((el, i) => {
+  options.forEach((opt, i) => {
     if (i === 0) {
-      el.value = option;
-      el.innerHTML = option;
+      opt.value = option;
+      opt.innerHTML = option;
       select.innerHTML = el.outerHTML;
     } else {
-      el.value = option + `${i++}`;
-      el.innerHTML = option + `${i++}`;
+      opt.value = option + `${i++}`;
+      opt.innerHTML = option + `${i++}`;
       select.innerHTML += el.outerHTML;
     }
   });
@@ -221,15 +231,14 @@ function constructor(el) {
 }
 
 function formsValidate(selector, rules) {
+  // eslint-disable-next-line no-new
   new window.JustValidate(selector, {
     rules,
     submitHandler(form) {
-      const formData = new FormData(form);
-
+      // eslint-disable-next-line no-undef
       fetch('#', {
         method: 'POST',
-        body: formData,
-      }).then(function (data) {
+      }).then(function () {
         form.reset();
         const popUp = document.querySelector('.pop-up-wrap');
         if (popUp.closest('.pop-up-wrap--active')) {

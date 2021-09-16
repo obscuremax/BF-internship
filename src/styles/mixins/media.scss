@@ -1,12 +1,5 @@
 @import "../utils/variables";
 
-// @mixin media-big-laptop {
-
-//   @media (max-width: $mediaWidthBigLaptop) {
-//     @content;
-//   }
-// }
-
 @mixin media-laptop {
 
   @media (max-width: $mediaWidthLaptop) {
