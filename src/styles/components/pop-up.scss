@@ -3,17 +3,19 @@
 @import "../utils/utils";
 
 .pop-up-wrap {
-  background: #e5e5e5;
+  background: rgba(140, 140, 140, 0.2);
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 150;
   display: none;
+  justify-content: center;
+  align-items: center;
 
   &--active {
-    display: block;
+    display: flex;
   }
 }
 
