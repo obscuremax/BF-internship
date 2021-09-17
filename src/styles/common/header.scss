@@ -71,7 +71,8 @@
     background: $success;
     border-radius: 2rem;
     color: $light;
-
+    cursor: pointer;
+    
     &:hover {
       background-color:
         linear-gradient(
