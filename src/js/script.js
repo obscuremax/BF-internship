@@ -155,7 +155,9 @@ document.addEventListener('click', (e) => {
 document.addEventListener('input', (e) => {
   const inputRange = e.target.closest('#price-range');
   const inputPrice = document.getElementById('price');
-  inputPrice.setAttribute('value', inputRange.value + ' 000 руб/мес');
+  if (inputRange) {
+    inputPrice.setAttribute('value', inputRange.value + ' 000 руб/мес');
+  }
 });
 
 formsValidate('.pop-up__form', {
