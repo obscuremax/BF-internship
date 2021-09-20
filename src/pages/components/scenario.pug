@@ -9,7 +9,7 @@ include ../mixin/scenario-card
       .title.scenario__title Сценарии роста бизнеса
       +tabs(scenarioTabs, "scenario")
       p.scenario__text Мы даём вам инструменты, которые позволят повысить ваш доход и выйти на новый уровень прибыли
-  .scenario__container-bg
+  .scenario__container-bg.tabs__content.tabs__content--active(id="scenario-0-c")
     .container
       .slider-wrap
         .scenario-slider.swiper
@@ -29,3 +29,6 @@ include ../mixin/scenario-card
       include ../includes/arr
     .scenario-slider__button-next.swiper-button-next
       include ../includes/arr
+  .tabs__content(id="scenario-1-c")
+    .container
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/PwZ6Mw8tkr4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

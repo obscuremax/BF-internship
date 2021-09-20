@@ -80,11 +80,7 @@
   align-items: flex-start;
   justify-content: space-between;
   position: relative;
-  display: none;
-
-  &--active {
-    display: flex;
-  }
+  display: flex;
 
   @include media-laptop {
     margin-top: 6rem;

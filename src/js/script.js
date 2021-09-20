@@ -100,17 +100,36 @@ inputMask.mask(inputsTel);
 
 // ==== \input mask ===//
 
+const tabsItems = document.querySelectorAll('.tabs__item');
+
+tabsItems.forEach((tabItem) => {
+  tabItem.addEventListener('click', () => {
+    const tabs = tabItem.parentElement.closest('.tabs');
+    removeClassListActiveFromTabs(tabs.children);
+    addClassList(tabItem, 'tabs__item--active');
+    const classId = tabItem.id.slice(0, -2);
+    clearClassCards(classId);
+    const currentCard = document.querySelector(`#${tabItem.id}-c`);
+    addClassList(currentCard, 'tabs__content--active');
+  });
+});
+
+function clearClassCards(word) {
+  const cards = document.querySelectorAll('.tabs__content');
+  cards.forEach((card) => {
+    if (card.id.includes(word)) {
+      removeClassList(card, 'tabs__content--active');
+    }
+  });
+}
+
 document.addEventListener('click', (e) => {
   if (e.target.closest('#price-range')) {
     return;
   }
-  const cashCard = document.querySelector('.cash-card');
-  const cashSpecifications = document.querySelector('.cash-specifications');
   const labelCross = e.target.closest('.label__cross');
   const btnAddLabel = e.target.closest('.btn-add');
   const popUp = document.querySelector('.pop-up-wrap');
-  const tabsItems = e.target.parentElement.closest('.tabs');
-  const tabsItem = e.target.parentElement.closest('.tabs__item');
   if (
     e.target.closest('.choice-card__btn') ||
     e.target.closest('.cash-card__btn') ||
@@ -126,29 +145,6 @@ document.addEventListener('click', (e) => {
   }
   if (btnAddLabel) {
     addLabel(btnAddLabel);
-  }
-  if (!tabsItems) {
-    return;
-  } else {
-    removeClassListActiveFromTabs(tabsItems.children);
-  }
-  if (tabsItem) {
-    addClassList(tabsItem, 'tabs__item--active');
-    if (tabsItem.children[0].innerHTML === 'Характеристики') {
-      removeClassList(cashCard, 'cash-card--active');
-      addClassList(cashSpecifications, 'cash-specifications--active');
-    }
-    if (tabsItem.children[0].innerHTML === 'О&nbsp;кассе') {
-      addClassList(cashCard, 'cash-card--active');
-      removeClassList(cashSpecifications, 'cash-specifications--active');
-    }
-    if (
-      tabsItem.children[0].innerHTML === 'Купить' ||
-      tabsItem.children[0].innerHTML === 'Аренда' ||
-      tabsItem.children[0].innerHTML === 'Наше&nbsp;ПО'
-    ) {
-      constructor(tabsItem);
-    }
   }
 });
 
@@ -193,44 +189,44 @@ function removeClassList(el, classEl) {
   el.classList.remove(classEl);
 }
 
-function constructor(el) {
-  const constructortext = el.dataset.constructortext;
-  const blocktext = el.dataset.blocktext;
-  const blockprice = el.dataset.blockprice;
-  const labelname = el.dataset.labelname;
-  const option = el.dataset.option;
+// function constructor(el) {
+//   const constructortext = el.dataset.constructortext;
+//   const blocktext = el.dataset.blocktext;
+//   const blockprice = el.dataset.blockprice;
+//   const labelname = el.dataset.labelname;
+//   const option = el.dataset.option;
 
-  const firstLabel = document.querySelector('.constructor__scenario')
-    .children[0];
-  const options = Array.from(
-    document.querySelector('.constructor__select').children
-  );
-  const select = document.querySelector('.constructor__select');
-  const constructorText = document.querySelector('.constructor__text');
-  const blockText = document.querySelectorAll('.choice-card__block')[2]
-    .children[0];
-  const blockPrice = document.querySelectorAll('.choice-card__block')[2]
-    .children[1];
+//   const firstLabel = document.querySelector('.constructor__scenario')
+//     .children[0];
+//   const options = Array.from(
+//     document.querySelector('.constructor__select').children
+//   );
+//   const select = document.querySelector('.constructor__select');
+//   const constructorText = document.querySelector('.constructor__text');
+//   const blockText = document.querySelectorAll('.choice-card__block')[2]
+//     .children[0];
+//   const blockPrice = document.querySelectorAll('.choice-card__block')[2]
+//     .children[1];
 
-  firstLabel.textContent = labelname;
-  select.innerHTML = '';
+//   firstLabel.textContent = labelname;
+//   select.innerHTML = '';
 
-  options.forEach((opt, i) => {
-    if (i === 0) {
-      opt.value = option;
-      opt.innerHTML = option;
-      select.innerHTML = el.outerHTML;
-    } else {
-      opt.value = option + `${i++}`;
-      opt.innerHTML = option + `${i++}`;
-      select.innerHTML += el.outerHTML;
-    }
-  });
-  firstLabel.append(select);
-  constructorText.innerHTML = constructortext;
-  blockText.innerHTML = blocktext;
-  blockPrice.innerHTML = blockprice;
-}
+//   options.forEach((opt, i) => {
+//     if (i === 0) {
+//       opt.value = option;
+//       opt.innerHTML = option;
+//       select.innerHTML = el.outerHTML;
+//     } else {
+//       opt.value = option + `${i++}`;
+//       opt.innerHTML = option + `${i++}`;
+//       select.innerHTML += el.outerHTML;
+//     }
+//   });
+//   firstLabel.append(select);
+//   constructorText.innerHTML = constructortext;
+//   blockText.innerHTML = blocktext;
+//   blockPrice.innerHTML = blockprice;
+// }
 
 function formsValidate(selector, rules) {
   // eslint-disable-next-line no-new
