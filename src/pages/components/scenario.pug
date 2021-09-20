@@ -1,10 +1,34 @@
-include ../mixin/title
-include ../mixin/section-menu
+include ../mixin/tabs
+include ../mixin/scenario-card
 
-- let scenarioLinks = [{adress: "#", name: "Рост доходов", className: "section-menu_link section-menu_link--active"}, {adress: "#", name: "Снижение расходов", className: "section-menu_link"}]
+- let scenarioTabs = [{tabName: "Рост доходов"}, {tabName: "Снижение расходов"}]
 
 .scenario
-  .container
-    +title("Сценарии роста бизнеса", "scenario_title")
-    +section-menu(scenarioLinks)
-    include ../includes/scenario-par
+  .container.scenario__container
+    .scenario__head
+      .title.scenario__title Сценарии роста бизнеса
+      +tabs(scenarioTabs, "scenario")
+      p.scenario__text Мы даём вам инструменты, которые позволят повысить ваш доход и выйти на новый уровень прибыли
+  .scenario__container-bg.tabs__content.tabs__content--active(id="scenario-0-c")
+    .container
+      .slider-wrap
+        .scenario-slider.swiper
+          .scenario-slider__wrapper.swiper-wrapper
+            .scenario-slider__slide.swiper-slide.scenario-slider__slide--odd
+              +scenario-card("../../img/scenario-1.png", "../../img/scenario-1sm.png", "Интерактивное обучение", ["Создаём диалоговые симуляции без навыков программирования. Организуем обучения в виртуальной и дополненой реальности. Обучение можно проходить на смартфоне, компьютере или VR-очках"], "scenario-card")
+            .scenario-slider__slide.swiper-slide.scenario-slider__slide--even
+              +scenario-card("../../img/scenario-2.png", "../../img/scenario-2sm.png", "Автоматические предзаказы", ["Анализируем наполненость полки, распознаем товары и проверяем выкладку и ассортимент. Контролируем работу кассира, фиксируем ошибки и нарушения в процессе его работы"], "scenario-card")
+            .scenario-slider__slide.swiper-slide.scenario-slider__slide--odd
+              +scenario-card("../../img/scenario-3.png", "../../img/scenario-3sm.png", "Видео аналитика", ["Создаём автозаказы, предоставляем аналитику в виде отчётов и дашбордов"], "scenario-card")
+            .scenario-slider__slide.swiper-slide.scenario-slider__slide--even
+              +scenario-card("../../img/scenario-4.png", "../../img/scenario-4sm.png", "Оценка эффективности рекламы", ["Анализируем полки, распознаем товары и проверяем выкладку и ассортимент. Контролируем работу кассира, фиксируем ошибки и нарушения в процессе его работы"], "scenario-card")
+
+
+    .scenario-slider__pagination.swiper-pagination
+    .scenario-slider__button-prev.swiper-button-prev
+      include ../includes/arr
+    .scenario-slider__button-next.swiper-button-next
+      include ../includes/arr
+  .tabs__content(id="scenario-1-c")
+    .container
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/PwZ6Mw8tkr4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

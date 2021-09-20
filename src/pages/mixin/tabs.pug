@@ -1,0 +1,9 @@
+mixin tabs(arr, className)
+  ul.tabs(class=className + "__tabs")
+    each el, i in arr
+      if i == 0
+        li.tabs__item.tabs__item--active(class=className + "__tabs-item" data-constructorText=el.constructorText data-blockText=el.blockText data-blockPrice=el.blockPrice data-labelName=el.labelName data-option=el.option id=className + "-" + i)
+          p.tabs__text(class=className + "__tabs-text") #{el.tabName}
+      else
+        li.tabs__item(class=className + "__tabs-item" data-constructorText=el.constructorText data-blockText=el.blockText data-blockPrice=el.blockPrice data-labelName=el.labelName data-option=el.option id=className + "-" + i)
+          p.tabs__text(class=className + "__tabs-text") #{el.tabName}

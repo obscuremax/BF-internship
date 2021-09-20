@@ -1,31 +1,94 @@
-@import "../utils/variables";
+@import "../utils/utils";
+
+@import "../mixins/mixins";
 
 .sphere-slider {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: absolute;
-  width: 120.5rem;
-  left: 50%;
-  transform: translate(-50%, 0);
+  position: relative;
+  overflow: hidden;
+  height: 64rem;
 
-  &_link {
-    width: 5rem;
-    height: 5rem;
-    background-color: rgba(196, 196, 196, 0.8);
-    border-radius: 50%;
+  @include media-tablet {
+    height: 32rem;
+  }
+
+  @include media-mobile-horizontal {
+    height: 20rem;
+  }
+
+  &__pagination {
+    position: static;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    display: none;
+
+    @include media-tablet {
+      display: block;
+    }
+
+    .swiper-pagination-bullet {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    > .swiper-pagination-bullet:not(:last-child) {
+      margin-right: 0.6rem;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: #3dd081;
+    }
+  }
+
+  &__button-prev,
+  &__button-next {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+    background-image: none;
+    min-width: 5rem;
+    min-height: 5rem;
+    border-radius: 50%;
+    background-color: $secondary;
 
-  &_image {
+    @include media-tablet {
+      display: none;
+    }
+
     path {
       fill: $light;
     }
 
-    &--rotate180 {
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &__button-prev {
+    left: 0;
+
+    svg {
       transform: rotate(180deg);
+    }
+  }
+
+  &__button-next {
+    right: 0;
+  }
+
+  .swiper-wrapper {
+    flex-wrap: wrap;
+
+    @include media-tablet {
+      flex-wrap: nowrap;
+    }
+  }
+
+  .swiper-slide {
+    height: calc((100% - 3rem) / 2);
+
+    @include media-tablet {
+      height: 100%;
     }
   }
 }

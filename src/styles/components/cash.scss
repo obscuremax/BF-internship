@@ -1,0 +1,332 @@
+@import "../utils/utils";
+
+@import "../mixins/mixins";
+
+.cash {
+  padding-top: 11rem;
+  padding-bottom: 8.1rem;
+
+  @include media-mobile-horizontal {
+    padding-top: 2.1rem;
+    padding-bottom: 2rem;
+  }
+
+  &__title {
+
+    @include media-mobile-horizontal {
+
+      @include font-size(3rem, 5rem);
+    }
+  }
+
+  &__tabs {
+    margin-top: 3.7rem;
+
+    @include media-mobile-horizontal {
+      margin-top: 1.9rem;
+    }
+  }
+
+  &__tabs-item {
+
+    @include media-mobile-horizontal {
+      height: 3.1rem;
+      border-radius: 1.1rem;
+    }
+  }
+
+  &__text {
+    display: none;
+
+    @include media-mobile-horizontal {
+      display: block;
+      font-weight: 600;
+
+      @include font-size(1.8rem, $medium);
+
+      margin-top: 2.2rem;
+    }
+  }
+
+  &__name {
+
+    @include font-size($big, $less-big);
+
+    font-weight: bold;
+  }
+
+  &__name--none {
+    display: none;
+
+    @include media-laptop {
+      display: block;
+      text-align: center;
+      margin-top: 4rem;
+    }
+
+    @include media-tablet {
+      font-size: 4.5rem;
+    }
+
+    @include media-mobile-horizontal {
+
+      @include font-size($medium, 4.5rem);
+    }
+  }
+}
+
+.cash-card {
+  margin-top: 8.6rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+  display: flex;
+
+  @include media-laptop {
+    margin-top: 6rem;
+  }
+
+  @include media-tablet-horizontal {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  @include media-mobile-horizontal {
+    margin-top: 1rem;
+  }
+
+  &__title {
+    margin-bottom: 5.5rem;
+    position: absolute;
+
+    @include media-laptop {
+      display: none;
+    }
+  }
+
+  &__content {
+    flex: 1 1 auto;
+    max-width: 45.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 1.6rem;
+    margin-top: 9.6rem;
+
+    @include media-laptop {
+      margin-left: 0;
+      margin-top: 0;
+    }
+
+    @include media-tablet-horizontal {
+      margin-top: 4rem;
+      max-width: 100%;
+    }
+
+    @include media-mobile-horizontal {
+      margin-top: 2.7rem;
+    }
+  }
+
+  &__caption {
+
+    @include font("open Sans", 600);
+
+    @include font-size($less-big, $less-big);
+
+    @include media-tablet-horizontal {
+      width: 100%;
+    }
+
+    @include media-mobile-horizontal {
+
+      @include font-size($medium-sm, $medium);
+    }
+  }
+
+  &__caption::after {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    @include media-mobile-horizontal {
+      margin: 1.4rem 0;
+    }
+  }
+
+  &__subcaption {
+
+    @include font-size($small-bg, $medium);
+
+    @include media-tablet-horizontal {
+      width: 100%;
+    }
+  }
+
+  &__subcaption + &__subcaption {
+    margin-top: 1.2rem;
+    max-width: 40.7rem;
+
+    @include media-tablet-horizontal {
+      max-width: 100%;
+    }
+  }
+
+  &__btn {
+    border-radius: 0.7rem;
+    background: $success;
+    width: 27.5rem;
+    height: 6.3rem;
+    font-weight: 600;
+    font-size: $medium-sm;
+    line-height: 6.3rem;
+    text-align: center;
+    margin-top: 2.4rem;
+    cursor: pointer;
+
+    @include media-tablet-horizontal {
+      margin: 5rem auto 0;
+    }
+
+    @include media-mobile-horizontal {
+      margin-top: 3.1rem;
+      width: 100%;
+      font-size: 1.8rem;
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__price {
+    font-weight: bold;
+
+    @include font-size(4rem, 2rem);
+
+    margin-top: 4rem;
+
+    @include media-mobile-horizontal {
+
+      @include font-size(2.4rem, 1.2rem);
+
+      margin-top: 2.3rem;
+    }
+  }
+}
+
+.cash-slider {
+  position: relative;
+  overflow: hidden;
+  max-width: 56.5rem;
+  height: 45.7rem;
+  background: center / contain no-repeat url("../../img/fon-slider.png");
+  margin-right: -6.8rem;
+
+  @include media-laptop {
+    margin-right: 0;
+  }
+
+  @include media-tablet {
+    max-width: 46rem;
+    height: 37rem;
+  }
+
+  @include media-mobile-horizontal {
+    max-width: 33.5rem;
+    height: 27rem;
+  }
+
+  @include media-mobile {
+    max-width: 30rem;
+    height: 27rem;
+  }
+
+  &__slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__img {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    img {
+      margin: 0 auto;
+    }
+  }
+
+  &__pagination {
+
+    @include media-tablet {
+      bottom: 5rem;
+    }
+
+    @include media-mobile-horizontal {
+      bottom: 3rem;
+    }
+
+    @include media-mobile {
+      bottom: 4rem;
+    }
+
+    .swiper-pagination-bullet {
+      width: 1rem;
+      height: 1rem;
+      background: $light;
+    }
+
+    > .swiper-pagination-bullet:not(:last-child) {
+      margin-right: 0.6rem;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: $primary;
+    }
+  }
+
+  &__button-prev,
+  &__button-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 5rem;
+    min-height: 5rem;
+    border-radius: 50%;
+    background-image: none;
+    background-color: rgba(196, 196, 196, 0.8);
+
+    @include media-mobile-horizontal {
+      display: none;
+    }
+
+    path {
+      fill: #59557b;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &__button-prev {
+    left: 1.7rem;
+
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__button-next {
+    right: 1.7rem;
+  }
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 5.6rem;
+}

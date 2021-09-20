@@ -1,0 +1,9 @@
+
+block formId
+  - let id = "application"
+  - let className = ""
+
+
+form.form(action="#" id=id class=className)
+  block form
+  input(type="submit", value="Оставить заявку" class=className + "-button").form__button

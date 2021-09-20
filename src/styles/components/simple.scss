@@ -1,42 +1,113 @@
+@import "../mixins/mixins";
+
+@import "../utils/utils";
+
 .simple {
-  &_title {
-    margin-top: 5.8rem;
+  padding-top: 2.6rem;
+  padding-bottom: 7rem;
+
+  @include media-mobile-horizontal {
+    padding-bottom: 2rem;
   }
 
-  .section_content {
-    margin-top: 8.1rem;
-    margin-bottom: 9.8rem;
-  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8.3rem;
 
-  .subtitle {
-    margin-left: 0.8rem;
-  }
-
-  .subtitle_text {
-    font-size: 2.5rem;
-    letter-spacing: 0;
-    width: 45.5rem;
-    line-height: 3.1rem;
-  }
-
-  .subtitle_main {
-    line-height: 5rem;
-  }
-
-  .image img {
-    margin-top: 1.6rem;
-    margin-right: -0.4rem;
-  }
-
-  &-cards {
-    .list {
-      display: flex;
-      justify-content: space-between;
+    @include media-tablet-horizontal {
+      align-items: center;
     }
 
-    .image img {
-      margin-top: 0;
-      margin-right: 0;
+    @include media-tablet {
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+  }
+
+  &__content-caption {
+    flex: 0 0 45.5rem;
+    margin-left: 0.7rem;
+
+    @include media-tablet-horizontal {
+      margin-left: 0;
+    }
+
+    @include media-tablet {
+      flex: 0 1 auto;
+      order: 2;
+      margin-top: 2rem;
+    }
+
+    @include media-mobile-horizontal {
+      margin-top: 2.5rem;
+    }
+  }
+
+  &__caption {
+    line-height: 5rem;
+
+    @include media-mobile-horizontal {
+
+      @include font-size($medium-sm, $medium);
+    }
+  }
+
+  &__caption::after {
+    margin-top: 2rem;
+
+    @include media-mobile-horizontal {
+      margin-top: 1.3rem;
+      max-width: 20rem;
+    }
+  }
+
+  &__subcaption {
+    letter-spacing: -0.1rem;
+
+    @include media-mobile-horizontal {
+
+      @include font-size(1.8rem, 2rem);
+
+      letter-spacing: 0.1rem;
+      line-height: 112%;
+    }
+  }
+
+  &__image {
+    flex: 0 1 auto;
+    padding-top: 1.5rem;
+
+    @include media-laptop {
+      padding-top: 0;
+    }
+
+    @include media-tablet {
+      flex: 0 1 auto;
+      order: 1;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 3rem;
+    margin-top: 10rem;
+
+    @include media-tablet-horizontal {
+      flex-wrap: wrap;
+      justify-content: space-around;
+      row-gap: 3rem;
+    }
+
+    @include media-mobile-horizontal {
+      justify-content: space-between;
+      margin-top: 4.3rem;
+      column-gap: 1.6rem;
+    }
+
+    @include media-mobile {
+      justify-content: center;
     }
   }
 }

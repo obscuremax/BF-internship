@@ -1,18 +1,20 @@
 // desktop first
-$mediaWidthBigLaptop: 1440px;
-$mediaWidthLaptop: 1366px;
+// $mediaWidthBigLaptop: 1440px;
+$mediaWidthLaptop: 1279px;
 $mediaWidthTabletHorizontal: 1024px;
 $mediaWidthTablet: 768px;
 $mediaWidthMobileHorizontal: 480px;
-$mediaWidthMobile: 320px;
+$mediaWidthMobile: 374px;
 
 // colors
 
 $primary: #000000;
 $primary-light: #3f3d56;
 $secondary: #b4abab;
+$secondary-dark: #898989;
 $success: linear-gradient(70.6deg, #35cc79 10.03%, rgba(52, 125, 85, 0.65) 139.7%);
 $light: #ffffff;
+$light-dark: #e5e5e5;
 
 
 // size
@@ -28,4 +30,3 @@ $medium-sm: 2.5rem;
 $small-bg: 2rem;
 $small: 1.6rem;
 $smallest: 1.4rem;
-

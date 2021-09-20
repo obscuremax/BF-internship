@@ -1,34 +1,31 @@
-@import "../mixins/font";
+@import "../utils/utils";
 
-@import "../mixins/font-size";
+@import "../mixins/mixins";
 
-@import "../utils/variables";
+.header__list-item {
+  & + & {
+    margin-left: 1.9rem;
+  }
+}
 
-.menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 31.5rem;
-  max-width: 31.5rem;
+.header__link {
+  color: $primary;
 
-  &_link {
+  &:hover:not(&--active) {
+    color: lighten($primary, 50%);
+    cursor: pointer;
+  }
 
-    @include font("Source Sans Pro", 600);
+  &--active {
+    cursor: default;
 
-    @include font-size($small-bg);
-
-    color: $primary;
-    position: relative;
-
-    &--active::after {
+    &::after {
       content: "";
+      position: relative;
       display: block;
       height: 0.2rem;
       background-color: $primary-light;
-      position: absolute;
-      top: 2.9rem;
-      left: 0;
-      width: 100%;
+      top: 0.6rem;
     }
   }
 }

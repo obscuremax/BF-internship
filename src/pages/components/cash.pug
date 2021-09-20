@@ -1,0 +1,50 @@
+include ../mixin/tabs
+include ../mixin/content-caption
+
+
+- let cashTabs = [{tabName: "О кассе"}, {tabName: "Видео"}, {tabName: "Характеристики"}]
+
+.cash
+  .container.cash__container
+    .cash__head
+      .title.cash__title Наши касса
+      +tabs(cashTabs, "cash")
+      p.cash__text Выбери решение, которое максимально подходит твоему бизнесу, и посмотри прогнозируемый рост выручки
+    .cash__name.cash__name--none НЕВА — 01 — Ф
+    .tabs__content.tabs__content--active(id="cash-0-c")
+      .cash-card
+        .cash-card__title.cash__name НЕВА — 01 — Ф
+        .cash-card__content
+          +content-caption("Идеальное решение для малого бизнеса", ["Устройство работает на базе Android, оснащена семидюймовым сенсорным экраном, портами USB, Ethernet и сетевыми проотколами GPRS, Wi-Fi, Bluetooth", "Кассовое ядро позволяет интегрировать с ККТ Нева — 01 — Ф любые сторонние приложения"], "cash-card")
+          .cash-card__btn Заказать
+        .cash-card__box
+          .cash-card__slider.cash-slider.swiper
+            .cash-slider__wrapper.swiper-wrapper
+              .cash-slider__slide.swiper-slide
+                picture.cash-slider__img
+                  source(media="(max-width: 768px)", srcset="../../img/cash-box-sm.png")
+                  img(src="../../img/cashbox.png", alt="")
+              .cash-slider__slide.swiper-slide
+                picture.cash-slider__img
+                  source(media="(max-width: 768px)", srcset="../../img/cash-box-sm.png")
+                  img(src="../../img/cashbox.png", alt="")
+              .cash-slider__slide.swiper-slide
+                picture.cash-slider__img
+                  source(media="(max-width: 768px)", srcset="../../img/cash-box-sm.png")
+                  img(src="../../img/cashbox.png", alt="")
+              .cash-slider__slide.swiper-slide
+                picture.cash-slider__img
+                  source(media="(max-width: 768px)", srcset="../../img/cash-box-sm.png")
+                  img(src="../../img/cashbox.png", alt="")
+            .cash-slider__pagination.swiper-pagination
+            .cash-slider__button-prev.swiper-button-prev
+              include ../includes/arr
+            .cash-slider__button-next.swiper-button-next
+              include ../includes/arr
+          .cash-card__price от 3 650 ₽
+    include ./cash-specifications
+    .tabs__content(id="cash-1-c")
+      .cash-card
+        .cash-card__content
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/XIA4S5NvOi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

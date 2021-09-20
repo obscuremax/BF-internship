@@ -1,4 +1,4 @@
-@mixin font-size ($size, $l-height: $size) {
+@mixin font-size ($size, $l-height) {
   font-size: $size;
-  line-height: $l-height;
+  line-height: $l-height / $size * 100%;
 }

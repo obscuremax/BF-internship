@@ -1,6 +1,38 @@
+include ../mixin/sphere-card
 
 .sphere
-	.container
-		include ../mixin/title
-		+title("Выбери сферу своего бизнеса", "sphere_title")
-	include ./sphere-slider
+  .container.sphere__container
+    .h2.title.sphere__title Выбери сферу своего бизнеса
+  .sphere__container-bg
+    .container
+      .slider-wrap
+        .sphere-slider.swiper
+          .sphere-slider__wrapper.swiper-wrapper
+            .sphere-slider__slide.swiper-slide
+              +sphere-card("Торговля продуктами", "../../img/sphere-1.png", "../../img/sphere-1sm.png")
+            .sphere-slider__slide.swiper-slide
+              +sphere-card("Другая торговля", "../../img/sphere-2.png", "../../img/sphere-2sm.png")
+            .sphere-slider__slide.swiper-slide
+              +sphere-card("Общепит", "../../img/sphere-3.png", "../../img/sphere-3sm.png")
+            .sphere-slider__slide.swiper-slide
+              +sphere-card("Услуги", "../../img/sphere-4.png", "../../img/sphere-4sm.png")
+            .sphere-slider__slide.swiper-slide
+              +sphere-card("Торговля продуктами", "../../img/sphere-1.png", "../../img/sphere-1sm.png")
+            .sphere-slider__slide.swiper-slide
+              +sphere-card("Другая торговля", "../../img/sphere-2.png", "../../img/sphere-2sm.png")
+            .sphere-slider__slide.swiper-slide
+              +sphere-card("Общепит", "../../img/sphere-3.png", "../../img/sphere-3sm.png")
+            .sphere-slider__slide.swiper-slide
+              +sphere-card("Услуги", "../../img/sphere-4.png", "../../img/sphere-4sm.png")
+
+
+    .sphere-slider__pagination.swiper-pagination
+    .sphere-slider__button-prev.swiper-button-prev
+      include ../includes/arr
+    .sphere-slider__button-next.swiper-button-next
+      include ../includes/arr
+
+
+
+
+

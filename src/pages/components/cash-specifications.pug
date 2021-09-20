@@ -1,0 +1,15 @@
+include ../mixin/specification
+include ../mixin/cross
+
+-let dataSpecifications = [{title: "Операционная система", text: "Android"}, {title: "Процессор", text: "MediaTek 6580"},{title: "Операционная система", text: "Android"},{title: "Оперативная память", text: "1 Гб"},{title: "Протоколы связи", text: "2 х USB(хост), 1 х MicroUSB, 1 х RJ45, Bluetooth"},{title: "Экран", text: "7 дюймов, TFT 600 х 1024"},{title: "Аккумулятор", text: "Li-on, 7.4 V, 2500 мАЧ"},{title: "Размеры", text: "740 г"},{title: "Ширина чековой ленты", text: "58 мм"},{title: "Доступные приложения", text: "Бифит касса, Лайтбокс, Умка 365 Торговля онлайн"},{title: "Скорость печати", text: "18 строк/сёк"},{title: "Гарантия", text: "1 год"},{title: "Подключаемая переферия", text: "Банковский терминал, сканер штрих — кодов, весы"},{title: "Время работы на дном заряде", text: "16 ч"}]
+
+.tabs__content(id="cash-2-c")
+  .cash-specifications
+    .cash-specifications__container
+      .cash-specifications__title Технические характеристики устройства
+      ul.cash-specifications__content
+        each el in dataSpecifications
+          +specification(el.title, el.text)
+
+
+

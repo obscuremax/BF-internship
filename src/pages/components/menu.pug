@@ -1,11 +1,11 @@
-include ../common/variables
-include ../mixin/link
+- let menuLinks = [{name: "Главная", href: "#"}, {name: "О нас", href: "#"}, {name: "Касса", href: "#"}, {name: "Сценарии", href: "#"}]
 
-nav.header_menu
-	ul.menu
-		each obj, i in menu
-			li.menu_item
-				if i===0
-					+link(obj.adress, obj.name, "menu_link menu_link--active")
-				else
-					+link(obj.adress, obj.name, "menu_link")
+nav.header__menu
+  ul.header__list.list
+    each link, i in menuLinks
+      if i === 0
+        li.header__list-item.list__item
+          a(href=link.href).header__link.header__link--active #{link.name}
+      else
+        li.header__list-item.list__item
+          a(href=link.href).header__link #{link.name}

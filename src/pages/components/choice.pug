@@ -1,0 +1,128 @@
+include ../mixin/tabs
+include ../mixin/cross
+- let choiceTabs = [{tabName: "Купить"}, {tabName: "Аренда"}, {tabName: "Наше ПО"}]
+
+.choice
+  .container.choice__container
+    .title.choice__title Выбери то, что нужно тебе
+    +tabs(choiceTabs, "choice")
+    .choice__constructor.constructor.tabs__content.tabs__content--active(id="choice-0-c")
+      .constructor__text Выбери решение, которое максимально подходит твоему бизнесу, и посмотри прогнозируемый рост выручки
+      .constructor__box
+        .constructor__scenario
+          label.constructor__label ККТ
+            select#kkt(name="kkt").constructor__select.constructor__select--br-green
+              option(value="Нева — 01 — Ф" selected).constructor__option Нева — 01 — Ф
+              option(value="Нева — 02 — Ф").constructor__option Нева — 02 — Ф
+          label.constructor__label.label--add Сценарий роста бизнеса
+            +cross("label")
+            select#scenario-1(name="scenario-1").constructor__select
+              option(value="not" selected).constructor__option Нет
+              option(value="Интерактивные видеоуроки" ).constructor__option Интерактивные видеоуроки
+              option(value="Автоматические предзаказы").constructor__option Автоматические предзаказы
+              option(value="Видео аналитика").constructor__option Видео аналитика
+              option(value="Оценка эффективности рекламы").constructor__option Оценка эффективности рекламы
+          label.constructor__label.label--add Сценарий роста бизнеса
+            +cross("label")
+            select#scenario-2(name="scenario-2").constructor__select
+              option(value="not" selected).constructor__option Нет
+              option(value="Интерактивные видеоуроки").constructor__option Интерактивные видеоуроки
+              option(value="Автоматические предзаказы").constructor__option Автоматические предзаказы
+              option(value="Видео аналитика").constructor__option Видео аналитика
+              option(value="Оценка эффективности рекламы").constructor__option Оценка эффективности рекламы
+          .btn-add Добавить сцеарий
+          label.constructor__label.constructor__label--mgt Текущая выручка
+            input#price(type="text" value="240 000" + " руб/мес" readonly).constructor__select.constructor__input
+          input#price-range(type="range" name="price-range" min="100" max="300" value="240" step="10").price-range
+        .constructor__card.choice-card
+          .choice-card__block
+            .choice-card__text.choice-card__text--sm Прогнозируемый рост выручки
+            .choice-card__price.choice-card__price--main 25 000 руб/мес
+            .choice-card__text.choice-card__text--bg Итого
+          .choice-card__block
+            .choice-card__text Расходы на СРБ
+            .choice-card__price 650 руб/мес
+          .choice-card__block
+            .choice-card__text ККТ
+            .choice-card__price 3650 руб
+          .choice-card__btn Оставить заявку
+    .choice__constructor.constructor.tabs__content(id="choice-1-c")
+      .constructor__text
+      .constructor__box
+        .constructor__scenario
+          label.constructor__label ККТ
+            select#kkt(name="kkt").constructor__select.constructor__select--br-green
+              option(value="Нева — 01 — Ф" selected).constructor__option Нева — 01 — Ф
+              option(value="Нева — 02 — Ф").constructor__option Нева — 02 — Ф
+          label.constructor__label.label--add Сценарий роста бизнеса
+            +cross("label")
+            select#scenario-1(name="scenario-1").constructor__select
+              option(value="not" selected).constructor__option Нет
+              option(value="Интерактивные видеоуроки" ).constructor__option Интерактивные видеоуроки
+              option(value="Автоматические предзаказы").constructor__option Автоматические предзаказы
+              option(value="Видео аналитика").constructor__option Видео аналитика
+              option(value="Оценка эффективности рекламы").constructor__option Оценка эффективности рекламы
+          label.constructor__label.label--add Сценарий роста бизнеса
+            +cross("label")
+            select#scenario-2(name="scenario-2").constructor__select
+              option(value="not" selected).constructor__option Нет
+              option(value="Интерактивные видеоуроки").constructor__option Интерактивные видеоуроки
+              option(value="Автоматические предзаказы").constructor__option Автоматические предзаказы
+              option(value="Видео аналитика").constructor__option Видео аналитика
+              option(value="Оценка эффективности рекламы").constructor__option Оценка эффективности рекламы
+          .btn-add Добавить сцеарий
+          label.constructor__label.constructor__label--mgt Текущая выручка
+            input#price(type="text" value="240 000" + " руб/мес" readonly).constructor__select.constructor__input
+          input#price-range(type="range" name="price-range" min="100" max="300" value="240" step="10").price-range
+        .constructor__card.choice-card
+          .choice-card__block
+            .choice-card__text.choice-card__text--sm Прогнозируемый рост выручки
+            .choice-card__price.choice-card__price--main 25 000 руб/мес
+            .choice-card__text.choice-card__text--bg Итого
+          .choice-card__block
+            .choice-card__text Расходы на СРБ
+            .choice-card__price 650 руб/мес
+          .choice-card__block
+            .choice-card__text ККТ
+            .choice-card__price 3650 руб
+          .choice-card__btn Оставить заявку
+    .choice__constructor.constructor.tabs__content(id="choice-2-c")
+      .constructor__text Проверим ваше ККТ на совместимость с нашим ПО
+      .constructor__box
+        .constructor__scenario
+          label.constructor__label Укажите ваш ККТ
+            select#kkt(name="kkt").constructor__select.constructor__select--br-green
+              option(value="Волга — Днепр — 006" selected).constructor__option Волга — Днепр — 006
+              option(value="Волга — Днепр — 007").constructor__option Волга — Днепр — 007
+          label.constructor__label.label--add Сценарий роста бизнеса
+            +cross("label")
+            select#scenario-1(name="scenario-1").constructor__select
+              option(value="not" selected).constructor__option Нет
+              option(value="Интерактивные видеоуроки" ).constructor__option Интерактивные видеоуроки
+              option(value="Автоматические предзаказы").constructor__option Автоматические предзаказы
+              option(value="Видео аналитика").constructor__option Видео аналитика
+              option(value="Оценка эффективности рекламы").constructor__option Оценка эффективности рекламы
+          label.constructor__label.label--add Сценарий роста бизнеса
+            +cross("label")
+            select#scenario-2(name="scenario-2").constructor__select
+              option(value="not" selected).constructor__option Нет
+              option(value="Интерактивные видеоуроки").constructor__option Интерактивные видеоуроки
+              option(value="Автоматические предзаказы").constructor__option Автоматические предзаказы
+              option(value="Видео аналитика").constructor__option Видео аналитика
+              option(value="Оценка эффективности рекламы").constructor__option Оценка эффективности рекламы
+          .btn-add Добавить сцеарий
+          label.constructor__label.constructor__label--mgt Текущая выручка
+            input#price(type="text" value="240 000" + " руб/мес" readonly).constructor__select.constructor__input
+          input#price-range(type="range" name="price-range" min="100" max="300" value="240" step="10").price-range
+        .constructor__card.choice-card
+          .choice-card__block
+            .choice-card__text.choice-card__text--sm Прогнозируемый рост выручки
+            .choice-card__price.choice-card__price--main 25 000 руб/мес
+            .choice-card__text.choice-card__text--bg Итого
+          .choice-card__block
+            .choice-card__text Расходы на СРБ
+            .choice-card__price 650 руб/мес
+          .choice-card__block
+            .choice-card__text Наше ПО
+            .choice-card__price 0 руб
+          .choice-card__btn Оставить заявку

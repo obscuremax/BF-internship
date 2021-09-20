@@ -1,0 +1,92 @@
+@import "../mixins/mixins";
+
+@import "../utils/utils";
+
+
+.footer__label {
+  display: block;
+  width: 100%;
+
+  @include font-size($small-bg, $medium-sm);
+
+  & + & {
+    margin-top: 1.6rem;
+
+    @include media-mobile-horizontal {
+      margin-top: 1rem;
+    }
+  }
+
+  @include media-mobile-horizontal {
+
+    @include font-size($smallest, 2.2rem);
+  }
+}
+
+.footer__input {
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+
+.footer__agree-label {
+
+  @include font-size(1.8rem, $medium-sm);
+
+  display: flex;
+  align-items: flex-start;
+  margin-top: 5.1rem;
+  cursor: pointer;
+
+  @include media-mobile-horizontal {
+    margin-top: 3.5rem;
+  }
+}
+
+.footer__agree-input {
+  display: none;
+}
+
+.footer__agree-fake {
+  display: inline-block;
+  background: $light;
+  position: relative;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  margin-right: 1.2rem;
+  margin-top: 0.2rem;
+  cursor: pointer;
+
+  @include media-mobile-horizontal {
+    min-width: 2rem;
+  }
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url("../../img/icon.svg") center center no-repeat, $success;
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 0.4rem;
+    opacity: 0;
+  }
+}
+
+.footer__agree-input:checked + .footer__agree-fake::before {
+  opacity: 1;
+}
+
+.footer__agree-text {
+  max-width: 35.1rem;
+
+  @include media-mobile-horizontal {
+
+    @include font-size(1.8rem, 2.5rem);
+  }
+}

@@ -1,0 +1,387 @@
+@import "../utils/utils";
+
+@import "../mixins/mixins";
+
+.choice {
+  padding-top: 5rem;
+  padding-bottom: 35.5rem;
+
+  @include media-tablet-horizontal {
+    padding-bottom: 5rem;
+  }
+
+  @include media-mobile-horizontal {
+    padding-top: 3rem;
+    padding-bottom: 0;
+  }
+
+  &__title {
+
+    @include media-mobile-horizontal {
+
+      @include font-size($medium, $medium);
+
+      text-align: start;
+    }
+  }
+
+  &__tabs {
+    margin-top: 3rem;
+
+    @include media-mobile-horizontal {
+      margin-top: 1.6rem;
+    }
+  }
+
+  &__tabs-item {
+
+    @include media-mobile-horizontal {
+      height: 3.1rem;
+    }
+  }
+}
+
+.constructor {
+  &__text {
+    margin: 5.5rem auto 0;
+    font-weight: 600;
+    flex: 1 1 100%;
+
+    @include font-size($medium, $medium);
+
+    text-align: center;
+    max-width: 93rem;
+
+    @include media-tablet-horizontal {
+
+      @include font-size($medium-sm, $medium-sm);
+    }
+
+    @include media-tablet {
+      font-size: 2.5rem;
+      margin-top: 3rem;
+      text-align: justify;
+      letter-spacing: -1.2px;
+    }
+
+    @include media-mobile-horizontal {
+
+      @include font-size(1.8rem, $medium);
+
+      margin-top: 1.3rem;
+      letter-spacing: 0;
+      text-align: start;
+    }
+  }
+
+  &__box {
+    margin-top: 14rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @include media-tablet-horizontal {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 4rem;
+    }
+
+    @include media-mobile-horizontal {
+      margin-top: 2.7rem;
+    }
+  }
+
+  &__scenario {
+    width: 55.8rem;
+
+    @include media-laptop {
+      max-width: 50rem;
+    }
+  }
+
+  &__label {
+    display: block;
+    position: relative;
+
+    @include font-size($small-bg, $medium-sm);
+
+    font-weight: 600;
+    color: $secondary-dark;
+
+    @include media-mobile-horizontal {
+
+      @include font-size(1.4rem, 1.5rem);
+    }
+  }
+
+  &__label + &__label {
+    margin-top: 5rem;
+
+    @include media-mobile-horizontal {
+      margin-top: 2rem;
+    }
+  }
+
+  &__label--mgt {
+    margin-top: 5rem;
+    position: relative;
+
+    @include media-mobile-horizontal {
+      margin-top: 2.5rem;
+    }
+  }
+
+  &__select {
+    display: block;
+    width: 100%;
+    box-shadow:
+      0 0 2px rgba(0, 0, 0, 0.08),
+      0 2px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 0.7rem;
+    height: 7rem;
+    outline: none;
+    border: 0;
+    padding-left: 0.8rem;
+
+    @include font-size($medium-sm, $medium-sm);
+
+    margin-top: 1rem;
+    appearance: none;
+    background:
+      $light top 3.2rem right 2.9rem no-repeat
+      url("../../img/sm-arrow.png");
+
+    @include media-mobile-horizontal {
+      height: 5rem;
+      margin-top: 0.5rem;
+
+      @include font-size(1.8rem, 5rem);
+
+      padding-left: 0.5rem;
+      background:
+        $light top 2.15rem right 1.3rem no-repeat
+        url("../../img/sm-sm-arrow.png");
+    }
+
+    &--br-green {
+      border: 0.2rem solid #35cc79;
+    }
+  }
+
+  .btn-add {
+    cursor: pointer;
+
+    @include font-size($medium-sm, $medium-sm);
+
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+
+
+    @include media-mobile-horizontal {
+
+      @include font-size(1.8rem, 1.5rem);
+
+      margin-top: 2rem;
+    }
+  }
+
+  .btn-add::before {
+    content: "+";
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 4rem;
+    display: inline-block;
+    margin-right: 1.4rem;
+
+    @include media-mobile-horizontal {
+      font-size: 3rem;
+      margin-right: 0.85rem;
+    }
+  }
+
+  &__input {
+    background: $light;
+  }
+
+  &__card {
+    max-height: 68.7rem;
+
+    @include media-tablet-horizontal {
+      margin-top: 4rem;
+    }
+
+    @include media-mobile-horizontal {
+      margin: 3.5rem -2rem;
+    }
+
+    @include media-mobile {
+      margin: 3.5rem -1rem;
+    }
+  }
+}
+
+.label__cross {
+  position: absolute;
+  top: 1rem;
+  right: -3rem;
+  width: 2.5rem;
+  height: 2.5rem;
+
+  @include media-tablet {
+    right: 0;
+    top: 0;
+  }
+
+  @include media-mobile-horizontal {
+    display: none;
+  }
+
+  &-inner {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .line-h,
+  .line-v {
+    background: #b4abab;
+  }
+}
+
+.price-range {
+  appearance: none;
+  background: #c4c4c4;
+  width: 100%;
+  height: 6px;
+  border-radius: 0 0 7px 7px;
+  outline: none;
+  box-shadow: inset 0 0 5px #c4c4c4;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  top: -0.9rem;
+}
+
+.price-range::-webkit-slider-thumb {
+  appearance: none;
+  background: $success;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  box-shadow: -500px 0 0 488px rgba(52, 125, 85, 0.65);
+  cursor: pointer;
+}
+
+.choice-card {
+  padding: 1.9rem 2.2rem 3.5rem;
+  width: 43rem;
+  background: $light;
+  box-shadow:
+    0 0 1.04px rgba(0, 0, 0, 0.08),
+    0 1.04px 12.51px rgba(0, 0, 0, 0.08);
+  border-radius: 0.7rem;
+
+  &__text {
+
+    @include font-size($medium, $medium-sm);
+
+    color: #898989;
+    margin-top: 6rem;
+
+    @include media-mobile-horizontal {
+
+      @include font-size(2rem, 2.2rem);
+
+      margin-top: 5rem;
+    }
+  }
+
+  &__text--sm {
+
+    @include font-size($medium-sm, $medium-bg);
+
+    margin-top: 0;
+
+    @include media-mobile-horizontal {
+
+      @include font-size(2rem, 3.1rem);
+    }
+  }
+
+  &__text--bg {
+
+    @include font-size($less-big, 1.2rem);
+
+    margin-top: 3.4rem;
+
+    @include media-mobile-horizontal {
+
+      @include font-size(3.5rem, 1rem);
+    }
+  }
+
+  &__price {
+
+    @include font-size($big, 1.2rem);
+
+    margin-top: 4rem;
+
+    @include media-mobile-horizontal {
+
+      @include font-size(4.36rem, 1rem);
+
+      margin-top: 3rem;
+    }
+
+    @include media-mobile {
+      font-size: 3.5rem;
+    }
+  }
+
+  &__price--main {
+
+    @include media-mobile-horizontal {
+      margin-top: 3rem;
+    }
+  }
+
+  &__price--main::after {
+    content: "";
+    display: block;
+    max-width: 38.2rem;
+    height: 0.2rem;
+    background: #b4abab;
+    margin-top: 5.5rem;
+
+    @include media-mobile-horizontal {
+      margin-top: 4.5rem;
+    }
+  }
+
+  &__btn {
+    margin-top: 8.8rem;
+    cursor: pointer;
+    color: $light;
+    width: 100%;
+    height: 8.3rem;
+    background:
+      linear-gradient(
+        70.6deg,
+        #35cc79 10.03%,
+        rgba(52, 125, 85, 0.65) 139.7%
+      );
+    border-radius: 0.7rem;
+
+    @include font-size($medium-sm, 8.3rem);
+
+    font-weight: 600;
+    text-align: center;
+
+    @include media-mobile-horizontal {
+      height: 7.2rem;
+      margin-top: 9.3rem;
+
+      @include font-size(2.2rem, 7.2rem);
+    }
+  }
+}
